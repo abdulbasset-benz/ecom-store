@@ -32,7 +32,7 @@
                     Browse through our diverse range of meticulously crafted garments, designed to bring out your
                     individuality and cater to your sense of style.
                 </p>
-                <button class="px-14 py-3 bg-black text-white font-semibold rounded-full hover:bg-gray-800 transition">
+                <button class="px-20 py-3 bg-black text-white font-semibold rounded-full hover:bg-gray-800 transition">
                     Shop Now
                 </button>
                 <!-- Stats Section -->
@@ -69,7 +69,7 @@
     </main>
 
     {{-- brands section --}}
-    <section class="bg-black w-full">
+    <section class="bg-black w-screen">
         <div class="flex justify-evenly items-center">
 
           {{-- ck logo --}}
@@ -127,9 +127,18 @@
         </div>
     </section>
 
-    <x-card />
+    <div>
+        <h1 class="text-7xl font-extrabold text-center py-3">New Arrivals</h1>
+    </div>
+    <section class="flex justify-center items-center container mx-auto gap-10">
+        <x-card />
+        <x-card />
+        <x-card />
+        <x-card />
+    </section>
 
-    <footer class="bg-gray-800 text-white text-center p-4">
+
+    <footer class="bg-gray-800 w-screen text-white text-center p-4">
         <p>&copy; {{ date('Y') }} SHOP CO. All rights reserved.</p>
     </footer>
 </body>
