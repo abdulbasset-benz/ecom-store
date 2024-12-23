@@ -1,5 +1,5 @@
 <nav class="bg-white shadow-md w-screen p-4 md:p-6 mx-auto sticky top-0 z-20">
-    <div class="container mx-auto flex items-center justify-between md:w-2xl">
+    <div class="container mx-auto px-5 flex items-center justify-between md:w-2xl">
         <!-- Left Section: Menu and Logo -->
         <div class="flex items-center space-x-4">
             <!-- Menu Icon -->
