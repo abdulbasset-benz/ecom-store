@@ -21,38 +21,42 @@
 <body>
     <x-navbar />
 
-    <main class="bg-gray-200 flex flex-col items-center text-center w-screen overflow-hidden antialiased">
-        <div class="w-5xl mx-auto px-12 pt-10">
-            <div class="space-y-4">
+    <main class="bg-gray-200 flex flex-col md:flex-row items-center text-center w-screen overflow-hidden antialiased md:px-12">
+        <div class="w-2xl md:max-w-2xl mx-auto px-12 pt-10 ">
+            <div class="space-y-8">
                 <h1 class="text-5xl text-left font-alfa text-slate-900 leading-tight uppercase">
                     Find clothes that match your style
                 </h1>
                 <p class="text-gray-700 text-left max-w-sm">
                     Browse through our diverse range of meticulously crafted garments, designed to bring out your individuality and cater to your sense of style.
                 </p>
-                <button
-                    class="px-32 py-3 my-4 bg-black text-white font-semibold rounded-full hover:bg-gray-800 transition">
-                    Shop Now
-                </button>
+                <div class="flex justify-center md:justify-start">
+                    <button
+                        class="px-32 md:px-12 py-3 my-4 bg-black text-white font-semibold rounded-full hover:bg-gray-800 transition">
+                        Shop Now
+                    </button>
+                </div>
+
                 <div class="flex justify-center items-center gap-5 flex-wrap pb-5">
                     <div>
-                        <h2 class="text-2xl font-bold text-black">200+</h2>
+                        <h2 class="text-2xl text-left md:text-4xl font-bold text-black">200+</h2>
                         <p class="text-gray-500">International Brands</p>
                     </div>
                     <hr class="border border-gray-500 h-14">
                     <div>
-                        <h2 class="text-2xl font-bold text-black">2,000+</h2>
+                        <h2 class="text-2xl text-left font-bold md:text-4xl text-black">2,000+</h2>
                         <p class="text-gray-500">High-Quality Products</p>
                     </div>
+                    <hr class="border opacity-0 md:opacity-100 border-gray-500 h-14">
                     <div>
-                        <h2 class="text-2xl font-bold text-black">30,000+</h2>
+                        <h2 class="text-2xl text-left font-bold md:text-4xl text-black">30,000+</h2>
                         <p class="text-gray-500">Happy Customers</p>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="w-xl h-auto mx-auto mt-4 relative">
+        <div class="w-4xl h-auto mx-auto mt-4 relative">
             <svg width="80px" height="80px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="#000000" class="bi bi-stars absolute right-10 top-0">
                 <path d="M7.657 6.247c.11-.33.576-.33.686 0l.645 1.937a2.89 2.89 0 0 0 1.829 1.828l1.936.645c.33.11.33.576 0 .686l-1.937.645a2.89 2.89 0 0 0-1.828 1.829l-.645 1.936a.361.361 0 0 1-.686 0l-.645-1.937a2.89 2.89 0 0 0-1.828-1.828l-1.937-.645a.361.361 0 0 1 0-.686l1.937-.645a2.89 2.89 0 0 0 1.828-1.828l.645-1.937zM3.794 1.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387A1.734 1.734 0 0 0 4.593 5.69l-.387 1.162a.217.217 0 0 1-.412 0L3.407 5.69A1.734 1.734 0 0 0 2.31 4.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387A1.734 1.734 0 0 0 3.407 2.31l.387-1.162zM10.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732L9.1 2.137a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L10.863.1z"/>
               </svg>
