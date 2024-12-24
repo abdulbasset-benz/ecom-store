@@ -13,14 +13,14 @@ export default {
                 sans: ["Figtree", ...defaultTheme.fontFamily.sans],
                 alfa: ["'Alfa Slab One'", "serif"],
             },
-            keyframes: {
-                marquee: {
-                    "0%": { transform: "translateX(100%)" },
-                    "100%": { transform: "translateX(-100%)" },
-                },
-            },
             animation: {
-                marquee: "marquee 20s linear infinite",
+                "loop-scroll": "loop-scroll 5s linear infinite",
+            },
+            keyframes: {
+                "loop-scroll": {
+                    from: { transform: "translateX(0)" },
+                    to: { transform: "translateX(-100%)" },
+                },
             },
         },
     },
