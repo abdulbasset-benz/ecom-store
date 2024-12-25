@@ -127,7 +127,22 @@
         </button>
     </div>
 
+    <div class="my-8">
+        <hr class="border-t-2 border-gray-200 dark:border-gray-700 max-w-full md:max-w-7xl mx-auto" />
+    </div>
+
+    <div class="flex justify-center flex-row items-center rounded-lg bg-gray-200 max-w-screen-sm">
+        
+
+    </div>
     
+
+
+  
+
+    {{-- testimonials --}}
+
+
     {{-- footer --}}
 
 
