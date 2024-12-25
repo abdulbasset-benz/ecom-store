@@ -1,8 +1,8 @@
-<div class="flex justify-center items-center mx-10">
+<div class="flex justify-center items-center mx-5">
     <div class="flex flex-col w-80 rounded-lg shadow-lg hover:shadow-xl transition-shadow bg-white">
         <!-- Image Section -->
         <div class="w-full rounded-t-lg overflow-hidden bg-gray-100 flex items-center justify-center">
-            <img class="w-full h-56 object-contain" src="{{ asset('images/shirt.png') }}" alt="Nike Air Jordan">
+            <img class="w-full h-56 object-contain" src="{{ asset('images/brown.jpeg') }}" alt="Nike Air Jordan">
         </div>
         <!-- Product Info -->
         <div class="p-5">
