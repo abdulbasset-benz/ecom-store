@@ -14,7 +14,7 @@ export default {
                 alfa: ["'Alfa Slab One'", "serif"],
             },
             animation: {
-                "loop-scroll": "loop-scroll 5s linear infinite",
+                "loop-scroll": "loop-scroll 25s linear infinite",
             },
             keyframes: {
                 "loop-scroll": {
