@@ -131,14 +131,31 @@
         <hr class="border-t-2 border-gray-200 dark:border-gray-700 max-w-full md:max-w-7xl mx-auto" />
     </div>
 
-    <div class="flex justify-center flex-row items-center rounded-lg bg-gray-200 max-w-screen-sm">
-        
-
+    <div class="flex justify-center flex-col items-center rounded-lg bg-gray-300 max-w-xl m-5 shadow-lg">
+        <!-- Header Section -->
+        <div class="flex justify-center items-center rounded-md px-8 py-4">
+            <h1 class="uppercase text-4xl font-alfa text-center antialiased leading-normal text-gray-600">browse by dress style</h1>
+        </div>
+        <!-- Content Section -->
+        <div class="flex flex-col justify-center items-center m-2 bg-white rounded-lg shadow-md p-4">
+            <h2 class="text-2xl uppercase text-gray-800 mb-2">casual</h2>
+            <img src="{{ asset('images/casual.jpeg') }}" alt="Dress Style" class="w-64 rounded-xl shadow-sm">
+        </div>
+        <div class="flex flex-col justify-center items-center m-2 bg-white rounded-lg shadow-md p-4">
+            <h2 class="text-2xl uppercase text-gray-800 mb-2">formal</h2>
+            <img src="{{ asset('images/formal.jpeg') }}" alt="Dress Style" class="w-64 rounded-xl shadow-sm">
+        </div>
+        <div class="flex flex-col justify-center items-center m-2 bg-white rounded-lg shadow-md p-4">
+            <h2 class="text-2xl uppercase text-gray-800 mb-2">gym</h2>
+            <img src="{{ asset('images/gym.jpeg') }}" alt="Dress Style" class="w-64 rounded-xl shadow-sm">
+        </div>
     </div>
+    
     
 
 
-  
+
+
 
     {{-- testimonials --}}
 
