@@ -131,43 +131,83 @@
         <hr class="border-t-2 border-gray-200 dark:border-gray-700 max-w-full md:max-w-7xl mx-auto" />
     </div>
 
-    <div class="flex justify-center flex-col items-center rounded-lg bg-gray-300 max-w-xl m-5 shadow-lg">
+
+    {{-- image grid --}}
+    <div class="flex justify-center flex-col md:max-w-7xl md:mx-auto rounded-lg bg-gray-100 max-w-xl m-5 shadow-lg">
         <!-- Header Section -->
-        <div class="flex justify-center items-center rounded-md px-8 py-4">
-            <h1 class="uppercase text-4xl font-alfa text-center antialiased leading-normal text-gray-600">browse by dress style</h1>
+
+        <div class="bg-white dark:bg-gray-200 h-full py-6 sm:py-8 lg:py-12 rounded-lg shadow-lg overflow-hidden">
+            <div class="flex justify-center items-center rounded-md px-8 py-4">
+                <h1 class="uppercase text-4xl font-alfa text-center antialiased leading-normal text-slate-900">browse by
+                    dress style</h1>
+            </div>
+            <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
+                <div class="mb-4 flex items-center justify-between gap-8 sm:mb-8 md:mb-12"></div>
+
+                <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 md:gap-6 xl:gap-8">
+                    <!-- image - start -->
+                    <a href="#"
+                        class="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-80">
+                        <img src="{{ asset('images/casual1.jpg') }}" loading="lazy" alt="Photo by Minh Pham"
+                            class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
+
+                        <div
+                            class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50">
+                        </div>
+
+                        <span
+                            class="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg uppercase font-extrabold">Casual</span>
+                    </a>
+                    <!-- image - end -->
+
+                    <!-- image - start -->
+                    <a href="#"
+                        class="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:col-span-2 md:h-80">
+                        <img src="{{ asset('images/formal2.jpg') }}" loading="lazy" alt="Photo by Magicle"
+                            class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
+
+                        <div
+                            class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50">
+                        </div>
+
+                        <span
+                            class="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg uppercase font-extrabold">Formal</span>
+                    </a>
+                    <!-- image - end -->
+
+                    <!-- image - start -->
+                    <a href="#"
+                        class="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:col-span-2 md:h-80">
+                        <img src="{{ asset('images/gym.jpg') }}" loading="lazy" alt="Photo by Martin Sanchez"
+                            class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
+
+                        <div
+                            class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50">
+                        </div>
+
+                        <span
+                            class="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg uppercase font-extrabold">Gym</span>
+                    </a>
+                    <!-- image - end -->
+
+                    <!-- image - start -->
+                    <a href="#"
+                        class="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-80">
+                        <img src="{{ asset('images/casual.jpg') }}" loading="lazy" alt="Photo by Lorenzo Herrera"
+                            class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
+
+                        <div
+                            class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50">
+                        </div>
+
+                        <span
+                            class="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg uppercase font-extrabold">Chill</span>
+                    </a>
+                    <!-- image - end -->
+                </div>
+            </div>
         </div>
-        <!-- Content Section -->
-        <div class="flex flex-col justify-center items-center m-2 bg-white rounded-lg shadow-md p-4">
-            <h2 class="text-2xl uppercase text-gray-800 mb-2">casual</h2>
-            <img src="{{ asset('images/casual.jpeg') }}" alt="Dress Style" class="w-64 rounded-xl shadow-sm">
-        </div>
-        <div class="flex flex-col justify-center items-center m-2 bg-white rounded-lg shadow-md p-4">
-            <h2 class="text-2xl uppercase text-gray-800 mb-2">formal</h2>
-            <img src="{{ asset('images/formal.jpeg') }}" alt="Dress Style" class="w-64 rounded-xl shadow-sm">
-        </div>
-        <div class="flex flex-col justify-center items-center m-2 bg-white rounded-lg shadow-md p-4">
-            <h2 class="text-2xl uppercase text-gray-800 mb-2">gym</h2>
-            <img src="{{ asset('images/gym.jpeg') }}" alt="Dress Style" class="w-64 rounded-xl shadow-sm">
-        </div>
-    </div>
-    
-    
 
-
-
-
-
-    {{-- testimonials --}}
-
-
-    {{-- footer --}}
-
-
-
-
-    <footer class="bg-gray-800 w-screen text-white text-center p-4">
-        <p>&copy; {{ date('Y') }} SHOP CO. All rights reserved.</p>
-    </footer>
 </body>
 
 </html>
