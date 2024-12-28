@@ -128,7 +128,7 @@
     </div>
 
     <div class="my-8">
-        <hr class="border-t-2 border-gray-200 dark:border-gray-700 max-w-full md:max-w-7xl mx-auto" />
+        <hr class="border-t-2 border-gray-200 max-w-full md:max-w-7xl mx-auto" />
     </div>
 
 
@@ -207,7 +207,7 @@
                 </div>
             </div>
         </div>
-
+    <x-footer />
 </body>
 
 </html>
