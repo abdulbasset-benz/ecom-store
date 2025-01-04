@@ -7,5 +7,5 @@ Route::get('/', function () {
 });
 
 Route::get('/product-details', function () {
-    return view('product-details');
+    return view('products.details');
 });
