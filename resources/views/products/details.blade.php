@@ -1,9 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-    @extends('layouts.app')
-
-@section('content')
     <div class="bg-gray-100">
         <div class="container mx-auto px-4 py-8">
             <div class="flex flex-wrap -mx-4">
@@ -116,4 +113,4 @@
     </div>
 @endsection
 
-@endsection
+
