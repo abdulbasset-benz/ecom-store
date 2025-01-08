@@ -1,7 +1,7 @@
-<nav class="bg-white shadow-md w-screen p-4 md:p-6 sticky top-0">
+<nav class="bg-white shadow-md w-screen p-4 md:p-6 sticky top-0 z-[100]">
     <div class="container mx-auto px-5 flex items-center justify-between relative">
         <!-- Hamburger Menu & Brand -->
-        <button class="lg:hidden pr-5 relative z-50" onclick="toggleNavLinks()">
+        <button class="lg:hidden pr-5 relative z-[102]" onclick="toggleNavLinks()">
             <x-css-menu class="w-7 h-7 text-gray-600 hover:text-gray-900 cursor-pointer" />
         </button>
         <div class="flex items-center space-x-4">
@@ -11,13 +11,13 @@
         </div>
 
         <!-- Navigation Links -->
-        <div class="fixed inset-0 bg-black bg-opacity-30 hidden lg:flex lg:relative lg:bg-transparent z-30"
+        <div class="fixed inset-0 bg-black bg-opacity-30 hidden lg:flex lg:relative lg:bg-transparent z-[90]"
             id="nav-overlay" onclick="toggleNavLinks()"></div>
 
-        <div
-            class="fixed top-0 left-0 w-full h-1/3 shadow-md transform -translate-x-full transition-transform lg:h-auto lg:relative lg:translate-x-0 lg:shadow-none lg:w-auto lg:flex lg:items-center z-40"
+        <div class="fixed top-0 left-0 w-full h-1/3 shadow-md transform -translate-x-full transition-transform lg:h-auto lg:relative lg:translate-x-0 lg:shadow-none lg:w-auto lg:flex lg:items-center z-[101] bg-white"
             id="nav-links">
-            <ul class="pt-16 pl-5 lg:pt-0 lg:flex lg:space-x-8 text-gray-600 bg-white w-full h-1/3 lg:w-auto lg:h-auto lg:bg-transparent">
+            <ul
+                class="pt-12 pl-5 lg:pt-0 lg:flex lg:space-x-8 text-gray-600 w-full lg:w-auto lg:h-auto lg:bg-transparent">
                 <li><a href="#" class="hover:text-gray-900 text-lg block p-4 lg:p-0">Home</a></li>
                 <li><a href="#" class="hover:text-gray-900 text-lg block p-4 lg:p-0">New Arrivals</a></li>
                 <li><a href="#" class="hover:text-gray-900 text-lg block p-4 lg:p-0">Products</a></li>
@@ -48,11 +48,10 @@
 </nav>
 <script>
     function toggleNavLinks() {
-    const navLinks = document.getElementById('nav-links');
-    const navOverlay = document.getElementById('nav-overlay');
+        const navLinks = document.getElementById('nav-links');
+        const navOverlay = document.getElementById('nav-overlay');
 
-    navLinks.classList.toggle('-translate-x-full');
-    navOverlay.classList.toggle('hidden');
-}
+        navLinks.classList.toggle('-translate-x-full');
+        navOverlay.classList.toggle('hidden');
+    }
 </script>
-
