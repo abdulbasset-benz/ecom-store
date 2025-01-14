@@ -8,3 +8,7 @@ body {
 ul li{
     transition: left 0.3s ease-in; /* Adjust duration and easing as desired */
 }
+
+.search-container.active {
+    transform: translateX(0);
+}
