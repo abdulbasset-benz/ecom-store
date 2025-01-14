@@ -29,17 +29,27 @@
 
         <!-- Right section: Search, Cart, and Profile -->
         <div class="flex items-center space-x-4">
+
+
             <!-- Search -->
-            <div class="relative">
-                <div class="hidden lg:flex items-center bg-slate-200 rounded-full px-4 py-1">
-                    <x-css-search class="w-5 h-5 text-gray-600 mr-2" />
-                    <input type="text" placeholder="Search"
-                        class="bg-transparent outline-none text-gray-600 placeholder-gray-400 w-40 lg:w-64" />
+
+            <div class="relative flex items-center">
+                <button class="search flex items-center">
+                    <x-css-search class="w-7 h-7 text-gray-600 hover:text-gray-900 md:w-8 md:h-8" />
+                </button>
+                <div
+                    class="search-container fixed inset-0 h-14 bg-white p-4 translate-x-full transition-transform duration-300 z-[200] lg:relative lg:inset-auto lg:p-0 lg:transform-none flex items-center">
+                    <input type="search" class="w-full bg-gray-100 border border-gray-200 rounded-full p-2"
+                        placeholder="Search">
+                        <x-feathericon-x class="cursor-pointer cursor-icon"/>
+
                 </div>
-                <a href="#" class="lg:hidden">
-                    <x-css-search class="w-7 h-7 text-gray-600 hover:text-gray-900" />
-                </a>
             </div>
+
+
+
+
+
             <!-- Cart and Profile -->
             <div class="flex items-center space-x-4">
                 <a href="#" class="block">
@@ -59,11 +69,16 @@
     const spans = document.querySelectorAll('span');
     const navLinks = document.getElementById('nav-links');
     const navOverlay = document.getElementById('nav-overlay');
+    const searchIcon = document.querySelector('.search');
+    const searchContainer = document.querySelector('.search-container');
+    const closeSearchIcon = document.querySelector('.cursor-icon');
 
-    // Adding event listeners
-    btn.addEventListener('click', (toggleNavLinks));
-
-
+    searchIcon.addEventListener('click', () => {
+        searchContainer.classList.add('active');
+    });
+    closeSearchIcon.addEventListener('click', () => {
+        searchContainer.classList.remove('active');
+    });
     let isMenuOpen = false;
 
     function toggleSpanAnimation() {
