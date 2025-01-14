@@ -73,6 +73,8 @@
     const searchContainer = document.querySelector('.search-container');
     const closeSearchIcon = document.querySelector('.cursor-icon');
 
+    btn.addEventListener('click', toggleNavLinks);
+
     searchIcon.addEventListener('click', () => {
         searchContainer.classList.add('active');
     });
