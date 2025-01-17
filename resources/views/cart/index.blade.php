@@ -28,10 +28,10 @@
                         <!-- Total Price and Quantity Controls -->
                         <div class="flex items-center justify-between gap-4">
                             <p class="text-2xl font-bold text-gray-900 total"> $</p>
-                            <span class="flex items-center gap-4 bg-gray-400 px-5 py-2 rounded-full">
-                                <x-css-math-minus class="w-4 h-4 cursor-pointer minus"/>
-                                <span class="quantity">1</span>
-                                <x-css-math-plus class="w-4 h-4 cursor-pointer plus"/>
+                            <span class="flex items-center gap-4 bg-gray-300 px-5 py-2 rounded-full">
+                                <x-css-math-minus class="cursor-pointer minus"/>
+                                <span class="quantity text-xl font-bold">1</span>
+                                <x-css-math-plus class="cursor-pointer plus"/>
                             </span>
                         </div>
                     </div>
