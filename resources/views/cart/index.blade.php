@@ -19,19 +19,19 @@
 
                         <!-- Price -->
                         <p class="text-lg text-gray-900">
-                            Price: <span class="text-gray-500">100 $</span>
+                            Price: <span class="text-gray-500">200 $</span>
                         </p>
                         <p class="text-lg text-gray-900">
-                            Quantity: <span class="text-gray-500">2</span>
+                            Quantity: <span class="text-gray-500 qty">1</span>
                         </p>
 
                         <!-- Total Price and Quantity Controls -->
                         <div class="flex items-center justify-between gap-4">
-                            <p class="text-2xl font-bold text-gray-900">200 $</p>
-                            <span class="flex items-center gap-2 bg-gray-400 px-5 py-2 rounded-lg">
-                                <x-css-math-minus class="w-4 h-4 cursor-pointer"/>
-                                <span>1</span>
-                                <x-css-math-plus class="w-4 h-4 cursor-pointer"/>
+                            <p class="text-2xl font-bold text-gray-900 total"> $</p>
+                            <span class="flex items-center gap-4 bg-gray-400 px-5 py-2 rounded-full">
+                                <x-css-math-minus class="w-4 h-4 cursor-pointer minus"/>
+                                <span class="quantity">1</span>
+                                <x-css-math-plus class="w-4 h-4 cursor-pointer plus"/>
                             </span>
                         </div>
                     </div>
@@ -43,4 +43,28 @@
             @endfor
         </div>
     </div>
+
+    <script>
+        const plusButtons = document.querySelectorAll('.plus');
+        const minusButtons = document.querySelectorAll('.minus');
+        const quantities = document.querySelectorAll('.quantity');
+        const totals = document.querySelectorAll('.total');
+        const qty = document.querySelectorAll('.qty');
+
+        plusButtons.forEach((button, index) => {
+            button.addEventListener('click', () => {
+                quantities[index].innerText = parseInt(quantities[index].innerText) + 1;
+                totals[index].innerText = parseInt(quantities[index].innerText) * 200 + ' $';
+            });
+        });
+
+        minusButtons.forEach((button, index) => {
+            button.addEventListener('click', () => {
+                if (parseInt(quantities[index].innerText) > 1) {
+                    quantities[index].innerText = parseInt(quantities[index].innerText) - 1;
+                    totals[index].innerText = parseInt(quantities[index].innerText) * 200 + ' $';
+                }
+            });
+        });
+    </script>
 @endsection
