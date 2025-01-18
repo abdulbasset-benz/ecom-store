@@ -50,7 +50,7 @@
     </div>
 
     {{-- Order Summary --}}
-    <div class="container mx-auto p-4 flex flex-col gap-5 md:w-1/3 md:self-start mt-[3.5rem]">
+    <div class="container mx-auto p-4 flex flex-col gap-5 md:w-1/3 md:self-start mt-[3.5rem] md:sticky md:top-32">
         <div class="flex flex-col max-w-full border-2 border-gray-300 rounded-lg p-5 gap-4">
             <h1 class="text-2xl capitalize font-bold">order summary</h1>
             <div class="flex justify-between">
