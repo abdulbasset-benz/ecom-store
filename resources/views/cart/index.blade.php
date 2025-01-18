@@ -1,16 +1,20 @@
 @extends('layouts.app')
 
 @section('content')
+<div class="md:flex md:justify-center md:items-center md:h-screen">
     <div class="container mx-auto p-4 flex flex-col gap-5">
-        <h1 class="uppercase text-3xl font-bold">your cart</h1>
+        <div class="flex justify-start">
+            <h1 class="uppercase text-3xl font-bold">your cart</h1>
+        </div>
+
         <!-- Wrapping all items in a single div -->
-        <div class="flex flex-col max-w-full border-2 border-gray-300 rounded-lg p-5 gap-4">
+        <div class="flex flex-col max-w-full border-2 border-gray-300 rounded-lg p-5 gap-4 md:w-3/3">
             @for ($i = 0; $i < 4; $i++)
                 <div class="flex items-start gap-5">
                     <img src="{{ asset('images/sneakers.jpeg') }}" alt="" class="w-32 rounded-sm">
-                    <div class="flex flex-col justify-between gap-2">
+                    <div class="flex flex-col justify-between md:w-full gap-2">
                         <!-- Product Title -->
-                        <h2 class="text-2xl font-bold flex items-center gap-2">
+                        <h2 class="text-2xl font-bold flex md:justify-between items-center gap-2">
                             Nike Sneakers cyan
                             <span class="inline-block cursor-pointer text-center">
                                 <x-css-trash class="text-red-600" />
@@ -45,7 +49,7 @@
     </div>
 
     {{-- order summary --}}
-    <div class="container mx-auto p-4 flex flex-col gap-5">
+    <div class="container mx-auto p-4 flex flex-col gap-5 md:w-2/3">
         <div class="flex flex-col max-w-full border-2 border-gray-300 rounded-lg p-5 gap-4">
             <h1 class="text-2xl capitalize font-bold">order summary</h1>
             <div class="flex justify-between">
@@ -65,9 +69,13 @@
                 <p class="text-xl text-gray-600 font-bold capitalize">total</p>
                 <span class="text-xl font-bold">467 $</span>
             </div>
-            <button class="bg-black text-xl font-bold text-gray-200 capitalize py-5 rounded-full mt-5 hover:text-gray-100">Confirm your order</button>
+            <div class="flex flex-col gap-5 mx-auto">
+                <button class="bg-black text-xl font-bold text-gray-200 capitalize py-3 px-8 rounded-full mt-5 hover:text-gray-100">Confirm your order</button>
+
+            </div>
         </div>
     </div>
+</div>
     <script>
         const plusButtons = document.querySelectorAll('.plus');
         const minusButtons = document.querySelectorAll('.minus');
