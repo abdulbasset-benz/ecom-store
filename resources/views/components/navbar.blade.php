@@ -22,7 +22,7 @@
             <ul class="pt-20 px-5 lg:pt-0 lg:px-0 lg:flex lg:space-x-8 text-gray-600 capitalize">
                 <li><a href="#" class="hover:text-gray-900 text-lg block p-4 lg:p-0">Home</a></li>
                 <li><a href="#" class="hover:text-gray-900 text-lg block p-4 lg:p-0">New Arrivals</a></li>
-                <li><a href="#" class="hover:text-gray-900 text-lg block p-4 lg:p-0">Products</a></li>
+                <li><a href="{{ asset('products') }}" class="hover:text-gray-900 text-lg block p-4 lg:p-0">Products</a></li>
                 <li><a href="#" class="hover:text-gray-900 text-lg block p-4 lg:p-0">Contact</a></li>
             </ul>
         </div>
@@ -47,7 +47,7 @@
                 <x-css-search class="w-7 h-7 text-gray-600 hover:text-gray-900 md:w-8 md:h-8" />
             </button>
 
-            <a href="/cart-index" class="block">
+            <a href="{{ asset('cart-index') }}" class="block">
                 <x-css-shopping-cart class="w-7 h-7 text-gray-600 hover:text-gray-900 md:w-8 md:h-8" />
             </a>
             <a href="#" class="block">
