@@ -1,23 +1,31 @@
-<div class="flex justify-center items-center mx-5">
-    <div class="flex flex-col w-80 rounded-lg shadow-lg hover:shadow-xl transition-shadow bg-white">
-        <!-- Image Section -->
-        <div class="w-full rounded-t-lg overflow-hidden bg-gray-100 flex items-center justify-center">
-            <img class="w-full h-56 object-contain" src="{{ asset('images/brown.jpeg') }}" alt="Nike Air Jordan">
-        </div>
-        <!-- Product Info -->
-        <div class="p-5">
-            <h1 class="text-2xl font-bold uppercase text-gray-800 tracking-wide">Nike Air Jordan</h1>
-            <h3 class="text-xl font-semibold text-blue-600">$233 USD</h3>
-            <p class="text-sm text-gray-600">
-                Step up your game with the latest Nike Air Jordans. Crafted for style and performance.
-            </p>
-        </div>
-        <!-- Button -->
-        <div class="px-5 pb-5">
-            <button
-                class="w-full rounded-lg bg-blue-600 py-3 font-bold text-white uppercase tracking-wide hover:bg-blue-500 transition-colors">
-                Buy Now
-            </button>
+<div class="p-3 md:p-4">
+    <div class="max-w-sm mx-auto">
+        <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+            {{-- Image Container - Made taller with min-height utilities --}}
+            <div class="relative min-w-[250px] min-h-[250px] md:min-h-[300px] bg-gray-100">
+                <img
+                    src="{{ asset('images/shoe4.jpg') }}"
+                    alt="Nike Air Jordan"
+                    class="absolute inset-0 w-full h-full object-contain md:object-cover transform hover:scale-105 transition-transform duration-300"
+                >
+            </div>
+
+            {{-- Product Info --}}
+            <div class="p-4">
+                <h2 class="text-lg md:text-xl font-bold text-gray-800 truncate">
+                    Nike Air Jordan
+                </h2>
+                <p class="text-blue-600 font-semibold mt-2">
+                    $233 USD
+                </p>
+            </div>
+
+            {{-- Button Container --}}
+            <div class="px-4 pb-4">
+                <button class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-4 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
+                    Buy Now
+                </button>
+            </div>
         </div>
     </div>
 </div>
