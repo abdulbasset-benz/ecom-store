@@ -1,33 +1,15 @@
-<div class="p-3 md:p-4">
-    <div class="max-w-sm mx-auto">
-        <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden">
-            {{-- Image Container - Made taller with min-height utilities --}}
-            <div class="relative min-w-[250px] min-h-[250px] md:min-h-[300px] bg-gray-500">
-                <img
-                    src="{{ asset('images/shoe4.jpg') }}"
-                    alt="Nike Air Jordan"
-                    class="absolute inset-0 w-full h-full object-contain md:object-cover transform hover:scale-105 transition-transform duration-300"
-                >
-            </div>
-
-            {{-- Product Info --}}
-            <div class="p-4">
-                <h2 class="text-lg md:text-xl font-bold text-gray-800 truncate">
-                    Nike Air Jordan
-                </h2>
-                <p class="text-blue-600 font-semibold mt-2">
-                    $233 USD
-                </p>
-            </div>
-
-            {{-- Button Container --}}
-            <div class="px-4 pb-4">
-                <button class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-4 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
-                    Buy Now
-                </button>
+<div class="container p-5 mx-auto">
+    {{-- header section --}}
+    <img class="rounded-lg" src="{{ asset('images/sneakers.jpeg') }}" alt="">
+    <div class="p-4">
+        <h1 class="text-xl font-bold">Product Name</h1>
+        <p class="text-gray-500">Product Description</p>
+        <div class="flex justify-between items-center mt-4">
+            <span class="text-xl font-bold">$100</span>
+            <div>
+                <button class="bg-blue-500 text-white px-4 py-2 rounded-full">Details</button>
+                <button class="bg-blue-500 text-white px-4 py-2 rounded-full">Add to Cart</button>
             </div>
         </div>
     </div>
 </div>
-
-
