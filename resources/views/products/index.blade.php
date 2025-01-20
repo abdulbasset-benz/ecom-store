@@ -10,7 +10,7 @@
         </div>
 
         {{-- products show section --}}
-        <div class="flex flex-wrap justify-center items-center gap-5 p-2">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
             @for ($i = 0; $i < 6; $i++)
             <x-card />
             @endfor
