@@ -2,7 +2,7 @@
     <div class="max-w-sm mx-auto">
         <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden">
             {{-- Image Container - Made taller with min-height utilities --}}
-            <div class="relative min-w-[250px] min-h-[250px] md:min-h-[300px] bg-gray-100">
+            <div class="relative min-w-[250px] min-h-[250px] md:min-h-[300px] bg-gray-500">
                 <img
                     src="{{ asset('images/shoe4.jpg') }}"
                     alt="Nike Air Jordan"
@@ -22,7 +22,7 @@
 
             {{-- Button Container --}}
             <div class="px-4 pb-4">
-                <button class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-4 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
+                <button class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-4 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
                     Buy Now
                 </button>
             </div>
