@@ -1,15 +1,17 @@
-<div class="container p-5 mx-auto">
+<div class="w-52 md:max-w-md lg:max-w-lg mt-5 rounded-lg p-4 mx-auto">
     {{-- header section --}}
-    <img class="rounded-lg" src="{{ asset('images/sneakers.jpeg') }}" alt="">
-    <div class="p-4">
+    <div class="flex justify-center">
+        <img class="rounded-lg w-full h-auto" src="{{ asset('images/green.jpeg') }}" alt="Product Image">
+    </div>
+
+    <div class="text-left mt-4">
         <h1 class="text-xl font-bold">Product Name</h1>
         <p class="text-gray-500">Product Description</p>
-        <div class="flex justify-between items-center mt-4">
-            <span class="text-xl font-bold">$100</span>
-            <div>
-                <button class="bg-blue-500 text-white px-4 py-2 rounded-full">Details</button>
-                <button class="bg-blue-500 text-white px-4 py-2 rounded-full">Add to Cart</button>
-            </div>
-        </div>
+        <span class="block text-xl font-bold mt-2">$100</span>
+    </div>
+
+    <div class="flex items-center gap-2 mt-4">
+        <span class="text-blue-600 cursor-pointer hover:underline block w-full">Details</span>
+        <span class="text-green-600 cursor-pointer hover:underline block w-full">Add to Cart</span>
     </div>
 </div>
