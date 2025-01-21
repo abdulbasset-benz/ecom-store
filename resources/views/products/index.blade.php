@@ -12,9 +12,37 @@
 
         {{-- Filters section --}}
         <div id="filters"
-            class="fixed top-0 right-[-100%] w-full h-full bg-white shadow-lg transition-all duration-300 ease-in-out z-50 p-5">
-            <h1 class="text-lg font-bold">Filters</h1>
-            <button id="close-filters" class="mt-3 bg-red-500 text-white px-4 py-2 rounded">Close</button>
+            class="fixed top-16 w-full p-6 h-fit bg-white rounded-t-3xl shadow-lg transition-all duration-300 ease-in-out z-50">
+            <div class="flex justify-between items-center">
+                <h1 class="text-2xl font-bold">Filters</h1>
+                <button id="close-filters" class="mt-3 bg-red-500 text-white px-4 py-2 rounded">Close</button>
+            </div>
+            <hr class="my-3 bg-slate-400">
+            <div class="space-y-3 px-2">
+                <div class="flex justify-between items-center">
+                    <h3 class="text-gray-500 text-lg">T-shirts</h3>
+                    <span><x-eva-arrow-ios-forward-outline class="w-6 h-6" /></span>
+                </div>
+                <div class="flex justify-between items-center">
+                    <h3 class="text-gray-500 text-lg">Shorts</h3>
+                    <span><x-eva-arrow-ios-forward-outline class="w-6 h-6" /></span>
+                </div>
+                <div class="flex justify-between items-center">
+                    <h3 class="text-gray-500 text-lg">Shirts</h3>
+                    <span><x-eva-arrow-ios-forward-outline class="w-6 h-6" /></span>
+                </div>
+                <div class="flex justify-between items-center">
+                    <h3 class="text-gray-500 text-lg">Hoodie</h3>
+                    <span><x-eva-arrow-ios-forward-outline class="w-6 h-6" /></span>
+                </div>
+                <div class="flex justify-between items-center">
+                    <h3 class="text-gray-500 text-lg">Jeans</h3>
+                    <span><x-eva-arrow-ios-forward-outline class="w-6 h-6" /></span>
+                </div>
+            </div>
+
+            <hr class="my-3 bg-slate-400">
+
         </div>
 
         {{-- Products show section --}}
@@ -45,7 +73,3 @@
         });
     </script>
 @endsection
-
-
-
-
