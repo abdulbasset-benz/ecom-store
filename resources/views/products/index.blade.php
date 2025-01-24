@@ -10,9 +10,9 @@
             </button>
         </div>
 
-        {{-- Main Layout Container - Enables side-by-side on desktop --}}
+
         <div class="lg:flex lg:gap-6">
-            {{-- Filters Panel - Slides on mobile, fixed sidebar on desktop --}}
+
             <div id="filters"
                 class="fixed inset-0 translate-x-full bg-slate-50 transition-transform duration-300 ease-in-out z-50 overflow-y-auto
                 lg:static lg:translate-x-0 lg:w-[300px] lg:min-h-screen lg:bg-transparent lg:shadow-none
@@ -21,7 +21,7 @@
                 [&::-webkit-scrollbar-thumb]:bg-gray-500
                 [&::-webkit-scrollbar-thumb]:rounded-full">
 
-                <div class="p-6">
+                <div class="pt-16 px-10">
                     {{-- Mobile Filter Header --}}
                     <div class="flex justify-between items-center lg:hidden">
                         <h1 class="text-2xl font-bold">Filters</h1>
@@ -34,26 +34,28 @@
 
                     {{-- Categories Section --}}
                     <div class="space-y-3 px-5">
-                        <div class="flex justify-between items-center group">
-                            <h3 class="text-gray-500 text-lg group-hover:text-gray-700 cursor-pointer">T-shirts</h3>
-                            <span><x-eva-arrow-ios-forward-outline class="w-6 h-6" /></span>
-                        </div>
-                        <div class="flex justify-between items-center group">
-                            <h3 class="text-gray-500 text-lg group-hover:text-gray-700 cursor-pointer">Shorts</h3>
-                            <span><x-eva-arrow-ios-forward-outline class="w-6 h-6" /></span>
-                        </div>
-                        <div class="flex justify-between items-center group">
-                            <h3 class="text-gray-500 text-lg group-hover:text-gray-700 cursor-pointer">Shirts</h3>
-                            <span><x-eva-arrow-ios-forward-outline class="w-6 h-6" /></span>
-                        </div>
-                        <div class="flex justify-between items-center group">
-                            <h3 class="text-gray-500 text-lg group-hover:text-gray-700 cursor-pointer">Hoodie</h3>
-                            <span><x-eva-arrow-ios-forward-outline class="w-6 h-6" /></span>
-                        </div>
-                        <div class="flex justify-between items-center group">
-                            <h3 class="text-gray-500 text-lg group-hover:text-gray-700 cursor-pointer">Jeans</h3>
-                            <span><x-eva-arrow-ios-forward-outline class="w-6 h-6" /></span>
-                        </div>
+                        <ul class="flex flex-col gap-4">
+                            <li class="flex items-center justify-between text-xl text-gray-500 group hover:text-gray-700 cursor-pointer">
+                                Tshirts
+                                <x-eva-arrow-ios-forward-outline class="w-6 h-6 ml-2 group-hover:text-gray-700" />
+                            </li>
+                            <li class="flex items-center justify-between text-xl text-gray-500 group hover:text-gray-700 cursor-pointer">
+                                Jackets
+                                <x-eva-arrow-ios-forward-outline class="w-6 h-6 ml-2 group-hover:text-gray-700" />
+                            </li>
+                            <li class="flex items-center justify-between text-xl text-gray-500 group hover:text-gray-700 cursor-pointer">
+                                Shirts
+                                <x-eva-arrow-ios-forward-outline class="w-6 h-6 ml-2 group-hover:text-gray-700" />
+                            </li>
+                            <li class="flex items-center justify-between text-xl text-gray-500 group hover:text-gray-700 cursor-pointer">
+                                Hoodies
+                                <x-eva-arrow-ios-forward-outline class="w-6 h-6 ml-2 group-hover:text-gray-700" />
+                            </li>
+                            <li class="flex items-center justify-between text-xl text-gray-500 group hover:text-gray-700 cursor-pointer">
+                                Jeans
+                                <x-eva-arrow-ios-forward-outline class="w-6 h-6 ml-2 group-hover:text-gray-700" />
+                            </li>
+                        </ul>
                     </div>
 
                     {{-- Price Range Section --}}
@@ -73,18 +75,30 @@
                         <span><x-eva-arrow-ios-forward-outline class="w-6 h-6" /></span>
                     </div>
                     <div class="flex flex-wrap gap-2 items-center p-8">
-                        <h3 class="text-gray-500 text-lg bg-slate-200 px-6 py-2 rounded-full cursor-pointer
-                            hover:bg-gray-900 hover:text-slate-100">Small</h3>
-                        <h3 class="text-gray-500 text-lg bg-slate-200 px-6 py-2 rounded-full cursor-pointer
-                            hover:bg-gray-900 hover:text-slate-100">Medium</h3>
-                        <h3 class="text-gray-500 text-lg bg-slate-200 px-6 py-2 rounded-full cursor-pointer
-                            hover:bg-gray-900 hover:text-slate-100">Large</h3>
-                        <h3 class="text-gray-500 text-lg bg-slate-200 px-6 py-2 rounded-full cursor-pointer
-                            hover:bg-gray-900 hover:text-slate-100">X-Large</h3>
-                        <h3 class="text-gray-500 text-lg bg-slate-200 px-6 py-2 rounded-full cursor-pointer
-                            hover:bg-gray-900 hover:text-slate-100">2X-Large</h3>
-                        <h3 class="text-gray-500 text-lg bg-slate-200 px-6 py-2 rounded-full cursor-pointer
-                            hover:bg-gray-900 hover:text-slate-100">3X-Large</h3>
+                        <h3
+                            class="text-gray-500 text-lg bg-slate-200 px-6 py-2 rounded-full cursor-pointer
+                            hover:bg-gray-900 hover:text-slate-100">
+                            Small</h3>
+                        <h3
+                            class="text-gray-500 text-lg bg-slate-200 px-6 py-2 rounded-full cursor-pointer
+                            hover:bg-gray-900 hover:text-slate-100">
+                            Medium</h3>
+                        <h3
+                            class="text-gray-500 text-lg bg-slate-200 px-6 py-2 rounded-full cursor-pointer
+                            hover:bg-gray-900 hover:text-slate-100">
+                            Large</h3>
+                        <h3
+                            class="text-gray-500 text-lg bg-slate-200 px-6 py-2 rounded-full cursor-pointer
+                            hover:bg-gray-900 hover:text-slate-100">
+                            X-Large</h3>
+                        <h3
+                            class="text-gray-500 text-lg bg-slate-200 px-6 py-2 rounded-full cursor-pointer
+                            hover:bg-gray-900 hover:text-slate-100">
+                            2X-Large</h3>
+                        <h3
+                            class="text-gray-500 text-lg bg-slate-200 px-6 py-2 rounded-full cursor-pointer
+                            hover:bg-gray-900 hover:text-slate-100">
+                            3X-Large</h3>
                     </div>
 
                     {{-- Dressing Style Section --}}
@@ -94,23 +108,35 @@
                         <span><x-eva-arrow-ios-forward-outline class="w-6 h-6" /></span>
                     </div>
                     <div class="flex flex-wrap gap-2 items-center p-8">
-                        <h3 class="text-gray-500 text-lg bg-slate-200 px-6 py-2 rounded-full cursor-pointer
-                            hover:bg-gray-900 hover:text-slate-100">Casual</h3>
-                        <h3 class="text-gray-500 text-lg bg-slate-200 px-6 py-2 rounded-full cursor-pointer
-                            hover:bg-gray-900 hover:text-slate-100">Formal</h3>
-                        <h3 class="text-gray-500 text-lg bg-slate-200 px-6 py-2 rounded-full cursor-pointer
-                            hover:bg-gray-900 hover:text-slate-100">Sport</h3>
-                        <h3 class="text-gray-500 text-lg bg-slate-200 px-6 py-2 rounded-full cursor-pointer
-                            hover:bg-gray-900 hover:text-slate-100">Vintage</h3>
-                        <h3 class="text-gray-500 text-lg bg-slate-200 px-6 py-2 rounded-full cursor-pointer
-                            hover:bg-gray-900 hover:text-slate-100">Streetwear</h3>
+                        <h3
+                            class="text-gray-500 text-lg bg-slate-200 px-6 py-2 rounded-full cursor-pointer
+                            hover:bg-gray-900 hover:text-slate-100">
+                            Casual</h3>
+                        <h3
+                            class="text-gray-500 text-lg bg-slate-200 px-6 py-2 rounded-full cursor-pointer
+                            hover:bg-gray-900 hover:text-slate-100">
+                            Formal</h3>
+                        <h3
+                            class="text-gray-500 text-lg bg-slate-200 px-6 py-2 rounded-full cursor-pointer
+                            hover:bg-gray-900 hover:text-slate-100">
+                            Sport</h3>
+                        <h3
+                            class="text-gray-500 text-lg bg-slate-200 px-6 py-2 rounded-full cursor-pointer
+                            hover:bg-gray-900 hover:text-slate-100">
+                            Vintage</h3>
+                        <h3
+                            class="text-gray-500 text-lg bg-slate-200 px-6 py-2 rounded-full cursor-pointer
+                            hover:bg-gray-900 hover:text-slate-100">
+                            Streetwear</h3>
                     </div>
 
                     {{-- Apply Filters Button - Only visible on mobile --}}
                     <hr class="my-3 bg-slate-400">
                     <div class="flex flex-col gap-5 mx-auto w-2/3 lg:hidden">
-                        <button class="bg-black text-xl font-bold text-gray-200 capitalize py-3 px-8 rounded-full mt-5
-                            hover:text-gray-100">Apply filters</button>
+                        <button
+                            class="bg-black text-xl font-bold text-gray-200 capitalize py-3 px-8 rounded-full mt-5
+                            hover:text-gray-100">Apply
+                            filters</button>
                     </div>
                 </div>
             </div>
