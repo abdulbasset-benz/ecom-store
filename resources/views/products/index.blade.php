@@ -21,7 +21,8 @@
                 [&::-webkit-scrollbar-thumb]:bg-gray-500
                 [&::-webkit-scrollbar-thumb]:rounded-full">
 
-                <div class="pt-16 px-10">
+                <div class="pt-16 pb-16 px-10">
+
                     {{-- Mobile Filter Header --}}
                     <div class="flex justify-between items-center lg:hidden">
                         <h1 class="text-2xl font-bold">Filters</h1>
@@ -65,7 +66,8 @@
                         <span><x-eva-arrow-ios-forward-outline class="w-6 h-6" /></span>
                     </div>
                     <div class="w-[90%] mx-auto">
-                        <input class="w-full px-auto accent-black p-4" type="range" name="" id="">
+                        <input class="w-full accent-black p-4" type="range" min="0" max="500" step="10" value="250">
+
                     </div>
 
                     {{-- Sizes Section --}}
@@ -135,10 +137,10 @@
                     {{-- Apply Filters Button - Only visible on mobile --}}
                     <hr class="my-3 bg-slate-400">
                     <div class="flex flex-col gap-5 mx-auto w-2/3 lg:hidden">
-                        <button
-                            class="bg-black text-xl font-bold text-gray-200 capitalize py-3 px-8 rounded-full mt-5
-                            hover:text-gray-100">Apply
-                            filters</button>
+                        <button aria-label="Apply filters" class="bg-black text-xl font-bold text-gray-200 capitalize py-3 px-8 rounded-full mt-5 hover:text-gray-100">
+                            Apply filters
+                        </button>
+
                     </div>
                 </div>
             </div>
