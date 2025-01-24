@@ -107,27 +107,29 @@
                         <h1 class="text-2xl font-bold">Dressing Style</h1>
                         <span><x-eva-arrow-ios-forward-outline class="w-6 h-6" /></span>
                     </div>
-                    <div class="flex flex-wrap gap-2 items-center p-8">
-                        <h3
-                            class="text-gray-500 text-lg bg-slate-200 px-6 py-2 rounded-full cursor-pointer
-                            hover:bg-gray-900 hover:text-slate-100">
-                            Casual</h3>
-                        <h3
-                            class="text-gray-500 text-lg bg-slate-200 px-6 py-2 rounded-full cursor-pointer
-                            hover:bg-gray-900 hover:text-slate-100">
-                            Formal</h3>
-                        <h3
-                            class="text-gray-500 text-lg bg-slate-200 px-6 py-2 rounded-full cursor-pointer
-                            hover:bg-gray-900 hover:text-slate-100">
-                            Sport</h3>
-                        <h3
-                            class="text-gray-500 text-lg bg-slate-200 px-6 py-2 rounded-full cursor-pointer
-                            hover:bg-gray-900 hover:text-slate-100">
-                            Vintage</h3>
-                        <h3
-                            class="text-gray-500 text-lg bg-slate-200 px-6 py-2 rounded-full cursor-pointer
-                            hover:bg-gray-900 hover:text-slate-100">
-                            Streetwear</h3>
+                    <div class="space-y-3 pt-5 px-5">
+                        <ul class="flex flex-col gap-4">
+                            <li class="flex items-center justify-between text-xl text-gray-500 group hover:text-gray-700 cursor-pointer">
+                                Casual
+                                <x-eva-arrow-ios-forward-outline class="w-6 h-6 ml-2 group-hover:text-gray-700" />
+                            </li>
+                            <li class="flex items-center justify-between text-xl text-gray-500 group hover:text-gray-700 cursor-pointer">
+                                StreetWear
+                                <x-eva-arrow-ios-forward-outline class="w-6 h-6 ml-2 group-hover:text-gray-700" />
+                            </li>
+                            <li class="flex items-center justify-between text-xl text-gray-500 group hover:text-gray-700 cursor-pointer">
+                                Formal
+                                <x-eva-arrow-ios-forward-outline class="w-6 h-6 ml-2 group-hover:text-gray-700" />
+                            </li>
+                            <li class="flex items-center justify-between text-xl text-gray-500 group hover:text-gray-700 cursor-pointer">
+                                Party
+                                <x-eva-arrow-ios-forward-outline class="w-6 h-6 ml-2 group-hover:text-gray-700" />
+                            </li>
+                            <li class="flex items-center justify-between text-xl text-gray-500 group hover:text-gray-700 cursor-pointer">
+                                Gym
+                                <x-eva-arrow-ios-forward-outline class="w-6 h-6 ml-2 group-hover:text-gray-700" />
+                            </li>
+                        </ul>
                     </div>
 
                     {{-- Apply Filters Button - Only visible on mobile --}}
