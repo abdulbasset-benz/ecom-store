@@ -9,7 +9,7 @@
 <div class="lg:flex lg:gap-4">
 
     <div id="filters"
-    class="fixed inset-0 mt-16 translate-x-full bg-white transition-transform duration-300 ease-in-out z-50 overflow-y-auto
+        class="fixed inset-0 mt-16 translate-x-full bg-white transition-transform duration-300 ease-in-out z-50 overflow-y-auto
     lg:static lg:translate-x-0 lg:w-[300px] lg:max-w-[500px] lg:min-w-[350px] lg:h-full lg:border-2 lg:rounded-xl lg:bg-slate-50 lg:shadow-lg
     lg:mr-4 lg:my-0
     [&::-webkit-scrollbar]:w-2
@@ -41,27 +41,27 @@
                     <li
                         class="flex items-center justify-between text-xl text-gray-500 group hover:text-gray-700 cursor-pointer">
                         Tshirts
-                        <x-eva-arrow-ios-forward-outline class="w-6 h-6 ml-2 group-hover:text-gray-700" />
+                        <x-eva-arrow-ios-forward-outline class="w-6 h-6 ml-2 group-hover:text-gray-700 arrow" />
                     </li>
                     <li
                         class="flex items-center justify-between text-xl text-gray-500 group hover:text-gray-700 cursor-pointer">
                         Jackets
-                        <x-eva-arrow-ios-forward-outline class="w-6 h-6 ml-2 group-hover:text-gray-700" />
+                        <x-eva-arrow-ios-forward-outline class="w-6 h-6 ml-2 group-hover:text-gray-700 arrow" />
                     </li>
                     <li
                         class="flex items-center justify-between text-xl text-gray-500 group hover:text-gray-700 cursor-pointer">
                         Shirts
-                        <x-eva-arrow-ios-forward-outline class="w-6 h-6 ml-2 group-hover:text-gray-700" />
+                        <x-eva-arrow-ios-forward-outline class="w-6 h-6 ml-2 group-hover:text-gray-700 arrow" />
                     </li>
                     <li
                         class="flex items-center justify-between text-xl text-gray-500 group hover:text-gray-700 cursor-pointer">
                         Hoodies
-                        <x-eva-arrow-ios-forward-outline class="w-6 h-6 ml-2 group-hover:text-gray-700" />
+                        <x-eva-arrow-ios-forward-outline class="w-6 h-6 ml-2 group-hover:text-gray-700 arrow" />
                     </li>
                     <li
                         class="flex items-center justify-between text-xl text-gray-500 group hover:text-gray-700 cursor-pointer">
                         Jeans
-                        <x-eva-arrow-ios-forward-outline class="w-6 h-6 ml-2 group-hover:text-gray-700" />
+                        <x-eva-arrow-ios-forward-outline class="w-6 h-6 ml-2 group-hover:text-gray-700 arrow" />
                     </li>
                 </ul>
             </div>
@@ -165,10 +165,24 @@
             const filterSection = document.getElementById('filter-section');
             const filters = document.getElementById('filters');
             const closeFilters = document.getElementById('close-filters');
+            document.addEventListener('click', (e) => {
+                const arrows = document.querySelectorAll('.arrow');
 
-            // Only set up mobile interactions if we're in mobile view
+                arrows.forEach(arrow => {
+                    if (!arrow.closest('li').contains(e.target)) {
+                        arrow.classList.remove('active');
+                    }
+                });
+            });
+
+            document.querySelectorAll('.arrow').forEach(arrow => {
+                arrow.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    arrow.classList.toggle('active');
+                });
+            });
+
             if (filterSection && closeFilters) {
-                // Open filter panel
                 filterSection.addEventListener('click', () => {
                     filters.classList.remove('translate-x-full');
                     filters.classList.add('translate-x-0');
