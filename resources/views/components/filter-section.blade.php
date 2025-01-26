@@ -6,19 +6,19 @@
 </div>
 
 
-<div class="lg:flex lg:gap-6">
+<div class="lg:flex lg:gap-4">
 
     <div id="filters"
-        class="fixed inset-0 mt-16 translate-x-full bg-slate-50 transition-transform duration-300 ease-in-out z-50 overflow-y-auto
-    lg:static lg:translate-x-0 lg:w-[300px] lg:h-screen lg:border-2 lg:rounded-xl lg:bg-transparent lg:shadow-none
-    lg:overflow-y-auto
-    [&::-webkit-scrollbar]:w-1
-    [&::-webkit-scrollbar-track]:bg-gray-300
-    [&::-webkit-scrollbar-thumb]:bg-gray-500
+    class="fixed inset-0 mt-16 translate-x-full bg-white transition-transform duration-300 ease-in-out z-50 overflow-y-auto
+    lg:static lg:translate-x-0 lg:w-[300px] lg:max-w-[500px] lg:min-w-[350px] lg:h-full lg:border-2 lg:rounded-xl lg:bg-slate-50 lg:shadow-lg
+    lg:mr-4 lg:my-0
+    [&::-webkit-scrollbar]:w-2
+    [&::-webkit-scrollbar-track]:bg-gray-100
+    [&::-webkit-scrollbar-thumb]:bg-gray-400
     [&::-webkit-scrollbar-thumb]:rounded-full">
 
 
-        <div class="pt-16 pb-16 px-10 lg:bg-transparent lg:overflow-y-visible">
+        <div class="pt-16 pb-16 lg:p-5 lg:bg-transparent lg:overflow-y-visible">
 
             {{-- Mobile Filter Header --}}
             <div class="flex justify-between items-center lg:hidden">
@@ -29,7 +29,7 @@
             {{-- Desktop Filter Header --}}
             <div class="flex justify-between items-center lg:flex">
                 <h1 class="text-2xl font-bold hidden lg:block">Filters</h1>
-                <span class=" cursor-pointer rounded-full bg-slate-300 p-2"><x-letsicon-filter
+                <span class="hidden lg:block cursor-pointer rounded-full bg-slate-300 p-2"><x-letsicon-filter
                         class="w-7" /></span>
             </div>
 
@@ -148,10 +148,10 @@
             </div>
 
             {{-- Apply Filters Button - Only visible on mobile --}}
-            <hr class="my-3 bg-slate-400">
+            <hr class="my-3 lg:hidden bg-slate-400">
             <div class="flex flex-col gap-5 mx-auto w-3/3">
                 <button aria-label="Apply filters"
-                    class="bg-black text-xl font-bold text-gray-200 capitalize py-3 px-8 rounded-full mt-5 hover:text-gray-100">
+                    class="bg-black text-xl font-bold text-gray-200 capitalize py-3 px-8 rounded-full mt-5 lg:hidden hover:text-gray-100">
                     Apply filters
                 </button>
 
