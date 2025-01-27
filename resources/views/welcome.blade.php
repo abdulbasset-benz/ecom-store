@@ -113,7 +113,7 @@
     </div>
 
     {{-- cards --}}
-    <div class="flex justify-start md:justify-center">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:max-w-7xl md:mx-auto">
         <x-card />
         <x-card />
         <x-card />
