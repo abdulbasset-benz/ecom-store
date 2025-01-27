@@ -17,3 +17,7 @@ Route::get('/products', function () {
 Route::get('/cart-index', function () {
     return view('cart.index');
 });
+
+Route::get('/contact', function () {
+    return view('pages.contact');
+});
