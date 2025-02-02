@@ -19,7 +19,7 @@
     <x-navbar />
 
     <!-- Main Content -->
-    <main class="container mx-auto px-4 py-8">
+    <main class="container mx-auto px-4">
         @yield('content')
     </main>
 
