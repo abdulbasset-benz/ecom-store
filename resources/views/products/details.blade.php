@@ -5,12 +5,12 @@
         <h1 class="text-4xl font-extrabold p-4 uppercase text-center col-span-1 md:col-span-2">Products Details</h1>
 
         {{-- Images Section --}}
-        <div class="p-4 rounded-lg flex flex-col items-center lg:flex-row gap-4">
+        <div class="p-4 rounded-lg flex flex-col items-center lg:flex-row">
             <!-- Thumbnails (Left on large screens) -->
             <div class="flex lg:flex-col gap-3 order-2 lg:order-1">
                 @foreach (['shoe1.jpg', 'shoe4.jpg', 'green.jpeg', 'shoe2.jpg'] as $image)
                     <img tabindex="0"
-                        class="w-20 h-30 object-cover rounded-lg cursor-pointer focus:ring-2 focus:ring-pink-500 focus:outline-none"
+                        class="w-20 h-30 object-cover rounded-lg cursor-pointer focus:ring-2 focus:ring-pink-500 focus:outline-none thumbnail"
                         src="{{ asset("images/$image") }}" alt="Thumbnail">
                 @endforeach
             </div>
@@ -18,7 +18,7 @@
             <!-- Main Image (Right on large screens) -->
             <div class="flex-1 order-1 lg:order-2 flex justify-center items-center">
                 <img tabindex="0"
-                    class="w-full h-auto lg:w-3/4 rounded-lg focus:ring-4 focus:ring-pink-500 focus:outline-none"
+                    class="w-full h-auto lg:w-3/4 rounded-lg focus:ring-4 focus:ring-pink-500 focus:outline-none mainImage"
                     src="{{ asset('images/black.jpeg') }}" alt="Main Image">
             </div>
         </div>
@@ -50,7 +50,7 @@
 
             {{-- Quantity & Add to Cart --}}
             <div class="grid grid-cols-3 gap-4 mt-6 items-center">
-                
+
                 <div class="flex items-center justify-center gap-4 bg-gray-300 px-5 py-3 rounded-full">
                     <x-css-math-minus class="cursor-pointer hover:text-red-500 minus" />
                     <span class="quantity text-xl font-bold">1</span>
@@ -66,4 +66,15 @@
 
         </div>
     </div>
+
+    <script>
+        const thumbnails = document.querySelectorAll('.thumbnail');
+        const mainImage = document.querySelector('.mainImage');
+
+        thumbnails.forEach(thumbnail => {
+            thumbnail.addEventListener('click', () => {
+                mainImage.src = thumbnail.src;
+            })
+        });
+    </script>
 @endsection
