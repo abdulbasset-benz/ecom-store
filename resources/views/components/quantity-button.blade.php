@@ -1,9 +1,11 @@
-<div class="flex items-center justify-between bg-gray-300 col-span-1 rounded-full">
-    <button class=" group px-9 py-2 rounded-l-full hover:bg-red-300">
-        <span class="font-bold text-2xl scale-200 group-hover:text-red-500">-</span>
+<div class="flex items-center justify-between bg-gray-300 rounded-full">
+    <button class=" group px-6 py-3 rounded-l-full hover:bg-red-300">
+        <x-feathericon-minus class="group-hover:text-red-700" />
+
     </button>
-    <span class="quantity text-xl font-bold">1</span>
-    <button class=" group px-9 py-2 rounded-r-full hover:bg-green-300">
-        <span class="font-bold text-2xl scale-200 group-hover:text-green-500">+</span>
+    <span class="quantity font-bold text-xl px-2">1</span>
+    <button class=" group px-6 py-3 rounded-r-full hover:bg-green-300">
+        <x-feathericon-plus class="group-hover:text-green-700"/>
+
     </button>
 </div>
