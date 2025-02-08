@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <main>
+    <main class="p-4">
         <div class="bg-white rounded-lg shadow-md p-6">
             <h1 class="text-2xl md:text-4xl font-bold text-center text-gray-800 mb-6">Get in Touch</h1>
             <p class="text-gray-600 text-center mb-8">
@@ -30,7 +30,7 @@
             </div>
 
             <!-- Contact Form -->
-            <div class="bg-gray-50 rounded-lg p-6 shadow-lg">
+            <div class="bg-gray-50 rounded-lg p-6 shadow-lg md:w-2/3 mx-auto">
                 <h2 class="text-xl font-semibold text-gray-800 mb-4">Send Us a Message</h2>
                 <form action="#" method="POST">
                     @csrf
