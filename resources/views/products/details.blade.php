@@ -51,14 +51,14 @@
             </div>
 
             {{-- Quantity & Add to Cart --}}
-            <div class="grid grid-cols-3 gap-4 mt-6 items-center">
+            <div class="mt-4 flex items-center gap-4">
 
                <x-quantity-button />
 
 
                 <!-- Add to Cart Button -->
                 <button
-                    class="bg-black py-3 text-slate-50 rounded-full col-span-2 md:col-span-2 font-bold uppercase hover:text-indigo-600 hover:bg-indigo-200">
+                    class="bg-black px-20 py-3 text-slate-50 rounded-full font-bold uppercase hover:text-indigo-600 hover:bg-indigo-200">
                     Add to Cart
                 </button>
             </div>
