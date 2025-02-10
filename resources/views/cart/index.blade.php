@@ -1,7 +1,5 @@
-@extends('layouts.app')
-
-@section('content')
-<div class="md:flex md:justify-center md:items-start md:h-screen gap-4">
+<x-app-layout>
+<div class="md:flex md:justify-center md:items-start md:h-screen gap-4 container mx-auto p-4">
     <!-- Cart Section -->
     <div class="container mx-auto p-4 flex flex-col gap-5 md:w-2/3">
         <div>
@@ -97,4 +95,4 @@
         });
     });
 </script>
-@endsection
+</x-app-layout>
