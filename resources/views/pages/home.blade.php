@@ -44,45 +44,51 @@
     </main>
 
     {{-- brands section --}}
-    <section class="flex overflow-hidden w-screen">
-        <div class="flex py-3 bg-red-500">
-            <div class="flex gap-20 animate-loop-scroll px-5">
-                <img class="w-24 mx-4 max-w-none filter invert brightness-0"
-                    src="{{ asset('images/icons/adidas.svg') }}" alt="Adidas">
-                <img class="w-24 mx-4 max-w-none filter invert brightness-0"
-                    src="{{ asset('images/icons/brand-nike.svg') }}" alt="Nike">
-                <img class="w-24 mx-4 max-w-none filter invert brightness-0"
-                    src="{{ asset('images/icons/calvin.svg') }}" alt="Calvin Klein">
-                <img class="w-24 mx-4 max-w-none filter invert brightness-0" src="{{ asset('images/icons/puma.svg') }}"
-                    alt="Puma">
-                <img class="w-24 mx-4 max-w-none filter invert brightness-0" src="{{ asset('images/icons/zara.svg') }}"
-                    alt="Zara">
+    <section class="overflow-hidden w-full bg-black py-3">
+        <div class="flex w-max animate-loop-scroll">
+            <!-- First Set of Images -->
+            <div class="flex gap-20 min-w-max">
+                <img class="w-24 mx-4 max-w-none filter invert brightness-0" src="{{ asset('images/icons/adidas.svg') }}" alt="Adidas">
+                <img class="w-24 mx-4 max-w-none filter invert brightness-0" src="{{ asset('images/icons/brand-nike.svg') }}" alt="Nike">
+                <img class="w-24 mx-4 max-w-none filter invert brightness-0" src="{{ asset('images/icons/calvin.svg') }}" alt="Calvin Klein">
+                <img class="w-24 mx-4 max-w-none filter invert brightness-0" src="{{ asset('images/icons/puma.svg') }}" alt="Puma">
+                <img class="w-24 mx-4 max-w-none filter invert brightness-0" src="{{ asset('images/icons/zara.svg') }}" alt="Zara">
             </div>
-            <div class="flex gap-20 animate-loop-scroll px-5">
-                <img class="w-24 mx-4 max-w-none filter invert brightness-0"
-                    src="{{ asset('images/icons/adidas.svg') }}" alt="Adidas">
-                <img class="w-24 mx-4 max-w-none filter invert brightness-0"
-                    src="{{ asset('images/icons/brand-nike.svg') }}" alt="Nike">
-                <img class="w-24 mx-4 max-w-none filter invert brightness-0"
-                    src="{{ asset('images/icons/calvin.svg') }}" alt="Calvin Klein">
-                <img class="w-24 mx-4 max-w-none filter invert brightness-0" src="{{ asset('images/icons/puma.svg') }}"
-                    alt="Puma">
-                <img class="w-24 mx-4 max-w-none filter invert brightness-0" src="{{ asset('images/icons/zara.svg') }}"
-                    alt="Zara">
+            <!-- Second Set of Images (Duplicate) -->
+            <div class="flex gap-20 min-w-max">
+                <img class="w-24 mx-4 max-w-none filter invert brightness-0" src="{{ asset('images/icons/adidas.svg') }}" alt="Adidas">
+                <img class="w-24 mx-4 max-w-none filter invert brightness-0" src="{{ asset('images/icons/brand-nike.svg') }}" alt="Nike">
+                <img class="w-24 mx-4 max-w-none filter invert brightness-0" src="{{ asset('images/icons/calvin.svg') }}" alt="Calvin Klein">
+                <img class="w-24 mx-4 max-w-none filter invert brightness-0" src="{{ asset('images/icons/puma.svg') }}" alt="Puma">
+                <img class="w-24 mx-4 max-w-none filter invert brightness-0" src="{{ asset('images/icons/zara.svg') }}" alt="Zara">
             </div>
-            <div class="flex gap-20 animate-loop-scroll px-5">
-                <img class="w-24 mx-4 max-w-none filter invert brightness-0"
-                    src="{{ asset('images/icons/adidas.svg') }}" alt="Adidas">
-                <img class="w-24 mx-4 max-w-none filter invert brightness-0"
-                    src="{{ asset('images/icons/brand-nike.svg') }}" alt="Nike">
-                <img class="w-24 mx-4 max-w-none filter invert brightness-0"
-                    src="{{ asset('images/icons/calvin.svg') }}" alt="Calvin Klein">
-                <img class="w-24 mx-4 max-w-none filter invert brightness-0" src="{{ asset('images/icons/puma.svg') }}"
-                    alt="Puma">
-                <img class="w-24 mx-4 max-w-none filter invert brightness-0" src="{{ asset('images/icons/zara.svg') }}"
-                    alt="Zara">
+            <!-- Third Set of Images (Extra for Seamless Loop) -->
+            <div class="flex gap-20 min-w-max">
+                <img class="w-24 mx-4 max-w-none filter invert brightness-0" src="{{ asset('images/icons/adidas.svg') }}" alt="Adidas">
+                <img class="w-24 mx-4 max-w-none filter invert brightness-0" src="{{ asset('images/icons/brand-nike.svg') }}" alt="Nike">
+                <img class="w-24 mx-4 max-w-none filter invert brightness-0" src="{{ asset('images/icons/calvin.svg') }}" alt="Calvin Klein">
+                <img class="w-24 mx-4 max-w-none filter invert brightness-0" src="{{ asset('images/icons/puma.svg') }}" alt="Puma">
+                <img class="w-24 mx-4 max-w-none filter invert brightness-0" src="{{ asset('images/icons/zara.svg') }}" alt="Zara">
             </div>
+        </div>
     </section>
+
+    <style>
+    @keyframes loop-scroll {
+        from {
+            transform: translateX(0);
+        }
+        to {
+            transform: translateX(-33.33%); /* Move only 1 set at a time */
+        }
+    }
+
+    .animate-loop-scroll {
+        animation: loop-scroll 10s linear infinite;
+    }
+    </style>
+
+
 
     {{-- cards --}}
 
