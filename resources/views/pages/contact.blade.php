@@ -1,6 +1,4 @@
-@extends('layouts.app')
-
-@section('content')
+<x-app-layout>
     <main class="p-4">
         <div class="bg-white rounded-lg shadow-md p-6">
             <h1 class="text-2xl md:text-4xl font-bold text-center text-gray-800 mb-6">Get in Touch</h1>
@@ -57,5 +55,5 @@
             </div>
         </div>
     </main>
-@endsection
+</x-app-layout>
 
