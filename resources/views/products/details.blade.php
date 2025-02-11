@@ -1,7 +1,6 @@
-@extends('layouts.app')
+<x-app-layout>
 
-@section('content')
-    <div class="container grid grid-cols-1 md:grid-cols-2 ">
+    <div class="container grid grid-cols-1 md:grid-cols-2 mx-auto">
         <h1 class="text-4xl font-extrabold p-4 uppercase text-left col-span-1 md:col-span-2">Products Details</h1>
 
         {{-- Images Section --}}
@@ -95,4 +94,4 @@
             })
         });
     </script>
-@endsection
+</x-app-layout>
