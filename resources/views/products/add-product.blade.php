@@ -1,6 +1,4 @@
-@extends('layouts.app') {{-- Replace with your layout file --}}
-
-@section('content')
+<x-app-layout>
 <div class="max-w-4xl mx-auto bg-white shadow-md rounded-lg p-6 mt-10">
     <h1 class="text-2xl font-bold text-gray-800 mb-6">Add New Product</h1>
 
@@ -80,4 +78,4 @@
         </div>
     </form>
 </div>
-@endsection
+</x-app-layout>
