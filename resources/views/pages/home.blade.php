@@ -36,11 +36,26 @@
             </div>
         </div>
 
-        <div class="w-4xl h-auto mx-auto mt-4 relative">
-            <img src="images/icons/stars.svg" alt="stars" class="absolute top-20 right-0 w-24">
-            <img src="{{ asset('images/fashion-man.png') }}" alt="Fashion Model" class="w-full h-auto max-w-lg">
-            <img src="images/icons/stars.svg" alt="" class="absolute bottom-20 left-0 w-24">
+        <div class="w-4xl h-auto mx-auto mt-4 relative z-0 isolate">
+            <img src="images/icons/stars.svg" alt="stars" class="absolute top-20 right-0 w-24 z-10">
+            <svg class="absolute top-32 left-5 w-60 z-10 " viewBox='0 0 2048 2048' xmlns='http://www.w3.org/2000/svg'>
+                <path
+                    d='M1024 0q141 0 272 36t245 103 207 160 160 208 103 245 37 272q0 141-36 272t-103 245-160 207-208 160-245 103-272 37q-141 0-272-36t-245-103-207-160-160-208-103-244-37-273q0-141 36-272t103-245 160-207 208-160T751 37t273-37zm0 1920q123 0 237-32t214-90 182-141 140-181 91-214 32-238q0-123-32-237t-90-214-141-182-181-140-214-91-238-32q-123 0-237 32t-214 90-182 141-140 181-91 214-32 238q0 123 32 237t90 214 141 182 181 140 214 91 238 32z'
+                    fill='#ff5733'></path>
+            </svg>
+
+            <img src="{{ asset('images/fashion-man.png') }}" alt="Fashion Model"
+                class="w-full h-auto max-w-lg z-20 relative">
+
+            <svg class="absolute bottom-32 right-5 w-52 z-10 " viewBox='0 0 2048 2048'
+                xmlns='http://www.w3.org/2000/svg'>
+                <path
+                    d='M1024 0q141 0 272 36t245 103 207 160 160 208 103 245 37 272q0 141-36 272t-103 245-160 207-208 160-245 103-272 37q-141 0-272-36t-245-103-207-160-160-208-103-244-37-273q0-141 36-272t103-245 160-207 208-160T751 37t273-37zm0 1920q123 0 237-32t214-90 182-141 140-181 91-214 32-238q0-123-32-237t-90-214-141-182-181-140-214-91-238-32q-123 0-237 32t-214 90-182 141-140 181-91 214-32 238q0 123 32 237t90 214 141 182 181 140 214 91 238 32z'
+                    fill='#577BC1'></path>
+            </svg>
+            <img src="images/icons/stars.svg" alt="" class="absolute bottom-20 left-0 w-24 z-10">
         </div>
+
     </main>
 
     {{-- brands section --}}
@@ -48,45 +63,47 @@
         <div class="flex w-max animate-loop-scroll">
             <!-- First Set of Images -->
             <div class="flex gap-20 min-w-max">
-                <img class="w-24 mx-4 max-w-none filter invert brightness-0" src="{{ asset('images/icons/adidas.svg') }}" alt="Adidas">
-                <img class="w-24 mx-4 max-w-none filter invert brightness-0" src="{{ asset('images/icons/brand-nike.svg') }}" alt="Nike">
-                <img class="w-24 mx-4 max-w-none filter invert brightness-0" src="{{ asset('images/icons/calvin.svg') }}" alt="Calvin Klein">
-                <img class="w-24 mx-4 max-w-none filter invert brightness-0" src="{{ asset('images/icons/puma.svg') }}" alt="Puma">
-                <img class="w-24 mx-4 max-w-none filter invert brightness-0" src="{{ asset('images/icons/zara.svg') }}" alt="Zara">
+                <img class="w-24 mx-4 max-w-none filter invert brightness-0"
+                    src="{{ asset('images/icons/adidas.svg') }}" alt="Adidas">
+                <img class="w-24 mx-4 max-w-none filter invert brightness-0"
+                    src="{{ asset('images/icons/brand-nike.svg') }}" alt="Nike">
+                <img class="w-24 mx-4 max-w-none filter invert brightness-0"
+                    src="{{ asset('images/icons/calvin.svg') }}" alt="Calvin Klein">
+                <img class="w-24 mx-4 max-w-none filter invert brightness-0" src="{{ asset('images/icons/puma.svg') }}"
+                    alt="Puma">
+                <img class="w-24 mx-4 max-w-none filter invert brightness-0" src="{{ asset('images/icons/zara.svg') }}"
+                    alt="Zara">
             </div>
             <!-- Second Set of Images (Duplicate) -->
             <div class="flex gap-20 min-w-max">
-                <img class="w-24 mx-4 max-w-none filter invert brightness-0" src="{{ asset('images/icons/adidas.svg') }}" alt="Adidas">
-                <img class="w-24 mx-4 max-w-none filter invert brightness-0" src="{{ asset('images/icons/brand-nike.svg') }}" alt="Nike">
-                <img class="w-24 mx-4 max-w-none filter invert brightness-0" src="{{ asset('images/icons/calvin.svg') }}" alt="Calvin Klein">
-                <img class="w-24 mx-4 max-w-none filter invert brightness-0" src="{{ asset('images/icons/puma.svg') }}" alt="Puma">
-                <img class="w-24 mx-4 max-w-none filter invert brightness-0" src="{{ asset('images/icons/zara.svg') }}" alt="Zara">
+                <img class="w-24 mx-4 max-w-none filter invert brightness-0"
+                    src="{{ asset('images/icons/adidas.svg') }}" alt="Adidas">
+                <img class="w-24 mx-4 max-w-none filter invert brightness-0"
+                    src="{{ asset('images/icons/brand-nike.svg') }}" alt="Nike">
+                <img class="w-24 mx-4 max-w-none filter invert brightness-0"
+                    src="{{ asset('images/icons/calvin.svg') }}" alt="Calvin Klein">
+                <img class="w-24 mx-4 max-w-none filter invert brightness-0" src="{{ asset('images/icons/puma.svg') }}"
+                    alt="Puma">
+                <img class="w-24 mx-4 max-w-none filter invert brightness-0" src="{{ asset('images/icons/zara.svg') }}"
+                    alt="Zara">
             </div>
             <!-- Third Set of Images (Extra for Seamless Loop) -->
             <div class="flex gap-20 min-w-max">
-                <img class="w-24 mx-4 max-w-none filter invert brightness-0" src="{{ asset('images/icons/adidas.svg') }}" alt="Adidas">
-                <img class="w-24 mx-4 max-w-none filter invert brightness-0" src="{{ asset('images/icons/brand-nike.svg') }}" alt="Nike">
-                <img class="w-24 mx-4 max-w-none filter invert brightness-0" src="{{ asset('images/icons/calvin.svg') }}" alt="Calvin Klein">
-                <img class="w-24 mx-4 max-w-none filter invert brightness-0" src="{{ asset('images/icons/puma.svg') }}" alt="Puma">
-                <img class="w-24 mx-4 max-w-none filter invert brightness-0" src="{{ asset('images/icons/zara.svg') }}" alt="Zara">
+                <img class="w-24 mx-4 max-w-none filter invert brightness-0"
+                    src="{{ asset('images/icons/adidas.svg') }}" alt="Adidas">
+                <img class="w-24 mx-4 max-w-none filter invert brightness-0"
+                    src="{{ asset('images/icons/brand-nike.svg') }}" alt="Nike">
+                <img class="w-24 mx-4 max-w-none filter invert brightness-0"
+                    src="{{ asset('images/icons/calvin.svg') }}" alt="Calvin Klein">
+                <img class="w-24 mx-4 max-w-none filter invert brightness-0" src="{{ asset('images/icons/puma.svg') }}"
+                    alt="Puma">
+                <img class="w-24 mx-4 max-w-none filter invert brightness-0" src="{{ asset('images/icons/zara.svg') }}"
+                    alt="Zara">
             </div>
         </div>
     </section>
 
-    <style>
-    @keyframes loop-scroll {
-        from {
-            transform: translateX(0);
-        }
-        to {
-            transform: translateX(-33.33%); /* Move only 1 set at a time */
-        }
-    }
 
-    .animate-loop-scroll {
-        animation: loop-scroll 10s linear infinite;
-    }
-    </style>
 
 
 
@@ -129,7 +146,7 @@
                 <div class="mb-4 flex items-center justify-between gap-8 sm:mb-8 md:mb-12"></div>
 
                 <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 md:gap-6 xl:gap-8">
-                    <!-- image - start -->
+
                     <a href="#"
                         class="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-80">
                         <img src="{{ asset('images/casual1.jpg') }}" loading="lazy" alt="Photo by Minh Pham"
@@ -142,9 +159,7 @@
                         <span
                             class="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg uppercase font-extrabold">Casual</span>
                     </a>
-                    <!-- image - end -->
 
-                    <!-- image - start -->
                     <a href="#"
                         class="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:col-span-2 md:h-80">
                         <img src="{{ asset('images/formal2.jpg') }}" loading="lazy" alt="Photo by Magicle"
@@ -157,9 +172,7 @@
                         <span
                             class="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg uppercase font-extrabold">Formal</span>
                     </a>
-                    <!-- image - end -->
 
-                    <!-- image - start -->
                     <a href="#"
                         class="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:col-span-2 md:h-80">
                         <img src="{{ asset('images/gym.jpg') }}" loading="lazy" alt="Photo by Martin Sanchez"
@@ -172,9 +185,7 @@
                         <span
                             class="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg uppercase font-extrabold">Gym</span>
                     </a>
-                    <!-- image - end -->
 
-                    <!-- image - start -->
                     <a href="#"
                         class="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-80">
                         <img src="{{ asset('images/casual.jpg') }}" loading="lazy" alt="Photo by Lorenzo Herrera"
