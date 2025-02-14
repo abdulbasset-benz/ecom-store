@@ -22,7 +22,8 @@
             <ul class="pt-20 px-5 lg:pt-0 lg:px-0 lg:flex lg:space-x-8 text-gray-600 capitalize">
                 <li><a href="#" class="hover:text-gray-900 text-lg block p-4 lg:p-0">Home</a></li>
                 <li><a href="#" class="hover:text-gray-900 text-lg block p-4 lg:p-0">New Arrivals</a></li>
-                <li><a href="{{ asset('products') }}" class="hover:text-gray-900 text-lg block p-4 lg:p-0">Products</a></li>
+                <li><a href="{{ asset('products') }}" class="hover:text-gray-900 text-lg block p-4 lg:p-0">Products</a>
+                </li>
                 <li><a href="#" class="hover:text-gray-900 text-lg block p-4 lg:p-0">Contact</a></li>
             </ul>
         </div>
@@ -31,8 +32,6 @@
         <!-- Right section: Search, Cart, and Profile -->
         <div class="flex items-center space-x-4">
             <!-- Search -->
-
-
             <div class="relative flex items-center">
                 <div
                     class="search-container fixed inset-0 h-14 bg-white p-4 translate-x-full transition-transform duration-300 z-[200] lg:relative lg:inset-auto lg:p-0 lg:transform-none flex items-center">
@@ -50,10 +49,30 @@
             <a href="{{ asset('cart-index') }}" class="block">
                 <x-css-shopping-cart class="w-7 h-7 text-gray-600 hover:text-gray-900 md:w-8 md:h-8" />
             </a>
-            <a href="#" class="block">
-                <x-css-profile class="w-7 h-7 text-gray-600 hover:text-gray-900 md:w-8 md:h-8" />
-            </a>
+
+            @auth
+                <a href="{{ route('profile') }}" class="block">
+                    <x-css-profile class="w-7 h-7 text-gray-600 hover:text-gray-900 md:w-8 md:h-8" />
+                </a>
+            @endauth
+
+            @guest
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="{{ route('register') }}">
+                        <x-primary-button class="ms-4">
+                            {{ __('Register') }}
+                        </x-primary-button>
+                    </a>
+                    <a href="{{ route('login') }}">
+                        <x-primary-button class="ms-4">
+                            {{ __('Login') }}
+                        </x-primary-button>
+                    </a>
+                </div>
+
+            @endguest
         </div>
+
 
     </div>
     </div>
