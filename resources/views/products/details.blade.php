@@ -45,9 +45,12 @@
             <div>
                 <h3 class="text-2xl font-semibold mb-2">Select a Color</h3>
                 <div class="flex items-center gap-2">
-                    <span class="w-10 h-10 rounded-full bg-black hover:ring-2 hover:ring-pink-500 hover:cursor-pointer"></span>
-                    <span class="w-10 h-10 rounded-full bg-blue-800 hover:ring-2 hover:ring-pink-500 hover:cursor-pointer"></span>
-                    <span class="w-10 h-10 rounded-full bg-yellow-900 hover:ring-2 hover:ring-pink-500 hover:cursor-pointer"></span>
+                    <span
+                        class="w-10 h-10 rounded-full bg-green-500 hover:ring-2 hover:ring-pink-500 hover:cursor-pointer"></span>
+                    <span
+                        class="w-10 h-10 rounded-full bg-blue-800 hover:ring-2 hover:ring-pink-500 hover:cursor-pointer"></span>
+                    <span
+                        class="w-10 h-10 rounded-full bg-yellow-900 hover:ring-2 hover:ring-pink-500 hover:cursor-pointer"></span>
                 </div>
             </div>
 
@@ -64,7 +67,7 @@
                 @endforeach
             </div>
 
-            <hr class="border-gray-300 my-5">
+            <hr class="border-gray-300 my-5">J
 
             {{-- Quantity & Add to Cart --}}
             <div class=" flex items-center gap-4">
