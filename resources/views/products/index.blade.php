@@ -1,6 +1,4 @@
-@extends('layouts.app')
-
-@section('content')
+<x-app-layout>
     <div class="relative container mx-auto min-h-screen overflow-hidden lg:overflow-visible">
         <x-filter-section />
             <div class="flex-1">
@@ -16,4 +14,4 @@
             </div>
         </div>
     </div>
-@endsection
+</x-app-layout>
