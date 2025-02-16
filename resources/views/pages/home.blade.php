@@ -59,7 +59,7 @@
 
     {{-- brands section --}}
     <section class="overflow-hidden w-full bg-black py-3">
-        <div class="flex animate-loop-scroll"> 
+        <div class="flex animate-loop-scroll">
             <!-- First Set of Images -->
             <div class="flex gap-20 min-w-max">
                 <img class="w-24 mx-4 max-w-none filter invert brightness-0"
