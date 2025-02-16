@@ -1,11 +1,11 @@
-<nav class="bg-white shadow-md w-screen p-4 md:p-6 sticky top-0 z-[100]">
-    <div class="container mx-auto px-5 flex items-center justify-between relative">
+<nav class="bg-white shadow-md w-full p-4 md:p-6 sticky top-0 z-[100]"> <!-- Changed w-screen to w-full -->
+    <div class="container mx-auto px-4 md:px-5 flex items-center justify-between relative"> <!-- Changed px-5 to px-4 for mobile -->
         <!-- Left section: Hamburger Menu & Brand -->
         <div class="flex items-center space-x-4">
             <button class="group lg:hidden relative z-[102]">
                 <div class="flex flex-col gap-1">
                     <span class="h-1 w-6 rounded-full bg-slate-400 transition"></span>
-                    <span class="h-1 w-8 rounded-full bg-red-400 transition "></span>
+                    <span class="h-1 w-8 rounded-full bg-red-400 transition"></span>
                     <span class="h-1 w-6 rounded-full bg-slate-400 transition"></span>
                 </div>
             </button>
@@ -22,21 +22,17 @@
             <ul class="pt-20 px-5 lg:pt-0 lg:px-0 lg:flex lg:space-x-8 text-gray-600 capitalize">
                 <li><a href="#" class="hover:text-gray-900 text-lg block p-4 lg:p-0">Home</a></li>
                 <li><a href="#" class="hover:text-gray-900 text-lg block p-4 lg:p-0">New Arrivals</a></li>
-                <li><a href="{{ asset('products') }}" class="hover:text-gray-900 text-lg block p-4 lg:p-0">Products</a>
-                </li>
+                <li><a href="{{ asset('products') }}" class="hover:text-gray-900 text-lg block p-4 lg:p-0">Products</a></li>
                 <li><a href="#" class="hover:text-gray-900 text-lg block p-4 lg:p-0">Contact</a></li>
             </ul>
         </div>
-
 
         <!-- Right section: Search, Cart, and Profile -->
         <div class="flex items-center space-x-4">
             <!-- Search -->
             <div class="relative flex items-center">
-                <div
-                    class="search-container fixed inset-0 h-14 bg-white p-4 translate-x-full transition-transform duration-300 z-[200] lg:relative lg:inset-auto lg:p-0 lg:transform-none flex items-center">
-                    <input type="search" class="w-full px-6 py-2 bg-gray-100 border border-gray-200 rounded-full "
-                        placeholder="Search">
+                <div class="search-container fixed inset-0 h-14 bg-white p-4 translate-x-full transition-transform duration-300 z-[200] lg:relative lg:inset-auto lg:p-0 lg:transform-none flex items-center">
+                    <input type="search" class="w-full px-6 py-2 bg-gray-100 border border-gray-200 rounded-full" placeholder="Search">
                     <x-feathericon-x class="w-7 h-7 cursor-pointer cursor-icon md:hidden" />
                 </div>
             </div>
@@ -69,58 +65,7 @@
                         </x-primary-button>
                     </a>
                 </div>
-
             @endguest
         </div>
-
-
-    </div>
     </div>
 </nav>
-
-<script>
-    // Selecting elements
-    const btn = document.querySelector('button');
-    const spans = document.querySelectorAll('span');
-    const navLinks = document.getElementById('nav-links');
-    const navOverlay = document.getElementById('nav-overlay');
-    const searchIcon = document.querySelector('.search');
-    const searchContainer = document.querySelector('.search-container');
-    const closeSearchIcon = document.querySelector('.cursor-icon');
-
-    btn.addEventListener('click', toggleNavLinks);
-
-    searchIcon.addEventListener('click', () => {
-        searchContainer.classList.add('active');
-    });
-    closeSearchIcon.addEventListener('click', () => {
-        searchContainer.classList.remove('active');
-    });
-    let isMenuOpen = false;
-
-    function toggleSpanAnimation() {
-        isMenuOpen = !isMenuOpen;
-
-        spans.forEach((span, index) => {
-            if (isMenuOpen) {
-                if (index === 0) {
-                    span.style.transform = 'translateY(8px) rotate(45deg)';
-                } else if (index === 1) {
-                    span.style.transform = 'scale(0)';
-                } else if (index === 2) {
-                    span.style.transform = 'translateY(-8px) rotate(-45deg)';
-                }
-            } else {
-                span.style.transform = 'none';
-            }
-        });
-
-    }
-
-    // Function to toggle navigation links
-    function toggleNavLinks() {
-        navLinks.classList.toggle('-translate-x-full');
-        navOverlay.classList.toggle('hidden');
-        toggleSpanAnimation();
-    }
-</script>
