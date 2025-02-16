@@ -1,6 +1,5 @@
 <x-app-layout>
-    <main
-        class="bg-gray-200 flex flex-col md:flex-row items-center text-center w-screen overflow-hidden antialiased md:px-12">
+    <main class="bg-gray-200 flex flex-col md:flex-row items-center text-center overflow-hidden antialiased md:px-12">
         <div class="w-2xl md:max-w-2xl mx-auto px-12 pt-10 ">
             <div class="space-y-8">
                 <h1 class="text-5xl md:text-6xl text-left font-alfa text-slate-900 leading-tight uppercase">
@@ -60,7 +59,7 @@
 
     {{-- brands section --}}
     <section class="overflow-hidden w-full bg-black py-3">
-        <div class="flex w-max animate-loop-scroll">
+        <div class="flex animate-loop-scroll"> 
             <!-- First Set of Images -->
             <div class="flex gap-20 min-w-max">
                 <img class="w-24 mx-4 max-w-none filter invert brightness-0"
@@ -202,5 +201,4 @@
                 </div>
             </div>
         </div>
-        <x-footer />
 </x-app-layout>
