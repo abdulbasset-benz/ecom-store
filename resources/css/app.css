@@ -15,3 +15,23 @@
 .animate-loop-scroll {
     animation: loop-scroll 10s linear infinite;
 }
+
+* {
+    outline: 1px solid red;
+}
+html {
+    overflow-x: hidden;
+}
+
+.newsletter-overlap {
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+}
+
+@media (min-width: 768px) {
+    .newsletter-overlap {
+        width: 80%;
+    }
+}
