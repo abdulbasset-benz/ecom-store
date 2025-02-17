@@ -9,6 +9,7 @@
         "php": "^8.2",
         "blade-ui-kit/blade-icons": "^1.7",
         "brunocfalcao/blade-feather-icons": "^4.0",
+        "davidhsianturi/blade-bootstrap-icons": "^1.5",
         "hasnayeen/blade-eva-icons": "^2.0",
         "khatabwedaa/blade-css-icons": "^1.4",
         "laravel/framework": "^11.31",
