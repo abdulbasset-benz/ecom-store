@@ -23,12 +23,12 @@
         <div
             class="flex flex-col items-start justify-center gap-5 max-w-6xl md:w-[100%] mx-auto md:flex-row md:justify-between md:items-center">
 
-            <div class="md:flex md:flex-col md:gap-4">
-                <h1 class="text-4xl font-alfa text-black text-left uppercase cursor-pointer">
+            <div class="flex flex-col gap-4">
+                <h1 class="text-4xl font-alfa text-black uppercase cursor-pointer">
                     SHOP.CO
                 </h1>
-                <p class="text-slate-500 text-left">
-                    We have clothes that suit your style and which you're proud to wear. From men to women.
+                <p class="text-slate-500">
+                    We have clothes that match your style—pieces you’ll be proud to wear, for both men and women.
                 </p>
                 <div class="flex gap-7">
                     <x-bi-facebook class="w-6 h-6 cursor-pointer hover:text-blue-500" />
@@ -37,6 +37,7 @@
                     <x-bi-github class="w-6 h-6 cursor-pointer hover:text-green-400" />
                 </div>
             </div>
+
 
 
             <div class="grid grid-cols-2 md:grid-cols-4 w-full gap-4 mt-4 md:col-span-4">
