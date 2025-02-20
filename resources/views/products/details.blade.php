@@ -67,7 +67,7 @@
                 @endforeach
             </div>
 
-            <hr class="border-gray-300 my-5">J
+            <hr class="border-gray-300 my-5">
 
             {{-- Quantity & Add to Cart --}}
             <div class=" flex items-center gap-4">
@@ -83,6 +83,8 @@
             </div>
 
         </div>
+
+        <x-review />
     </div>
 
     <script>
