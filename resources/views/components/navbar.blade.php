@@ -1,5 +1,5 @@
-<nav class="bg-white shadow-md w-full p-4 md:p-6 sticky top-0 z-[100]"> <!-- Changed w-screen to w-full -->
-    <div class="container mx-auto px-4 md:px-5 flex items-center justify-between relative"> <!-- Changed px-5 to px-4 for mobile -->
+<nav class="bg-white shadow-md w-full p-4 md:p-6 sticky top-0 z-[100]">
+    <div class="container mx-auto px-4 md:px-5 flex items-center justify-between relative">
         <!-- Left section: Hamburger Menu & Brand -->
         <div class="flex items-center space-x-4">
             <button class="group lg:hidden relative z-[102]">
@@ -22,7 +22,8 @@
             <ul class="pt-20 px-5 lg:pt-0 lg:px-0 lg:flex lg:space-x-8 text-gray-600 capitalize">
                 <li><a href="#" class="hover:text-gray-900 text-lg block p-4 lg:p-0">Home</a></li>
                 <li><a href="#" class="hover:text-gray-900 text-lg block p-4 lg:p-0">New Arrivals</a></li>
-                <li><a href="{{ asset('products') }}" class="hover:text-gray-900 text-lg block p-4 lg:p-0">Products</a></li>
+                <li><a href="{{ route('products.index') }}"
+                        class="hover:text-gray-900 text-lg block p-4 lg:p-0">Products</a></li>
                 <li><a href="#" class="hover:text-gray-900 text-lg block p-4 lg:p-0">Contact</a></li>
             </ul>
         </div>
@@ -31,8 +32,10 @@
         <div class="flex items-center space-x-4">
             <!-- Search -->
             <div class="relative flex items-center">
-                <div class="search-container fixed inset-0 h-14 bg-white p-4 translate-x-full transition-transform duration-300 z-[200] lg:relative lg:inset-auto lg:p-0 lg:transform-none flex items-center">
-                    <input type="search" class="w-full px-6 py-2 bg-gray-100 border border-gray-200 rounded-full" placeholder="Search">
+                <div
+                    class="search-container fixed inset-0 h-14 bg-white p-4 translate-x-full transition-transform duration-300 z-[200] lg:relative lg:inset-auto lg:p-0 lg:transform-none flex items-center">
+                    <input type="search" class="w-full px-6 py-2 bg-gray-100 border border-gray-200 rounded-full"
+                        placeholder="Search">
                     <x-feathericon-x class="w-7 h-7 cursor-pointer cursor-icon md:hidden" />
                 </div>
             </div>
@@ -42,12 +45,12 @@
                 <x-css-search class="w-7 h-7 text-gray-600 hover:text-gray-900 md:w-8 md:h-8" />
             </button>
 
-            <a href="{{ asset('cart-index') }}" class="block">
+            <a href="" class="block">
                 <x-css-shopping-cart class="w-7 h-7 text-gray-600 hover:text-gray-900 md:w-8 md:h-8" />
             </a>
 
             @auth
-                <a href="{{ route('profile') }}" class="block">
+                <a href="{{ route('profile.edit') }}" class="block">
                     <x-css-profile class="w-7 h-7 text-gray-600 hover:text-gray-900 md:w-8 md:h-8" />
                 </a>
             @endauth
