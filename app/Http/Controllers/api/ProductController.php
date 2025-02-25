@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers\api;
 
-use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
 use App\Models\Product;
+use Illuminate\Http\Request;
 use GuzzleHttp\Handler\Proxy;
+use App\Http\Controllers\Controller;
+use App\Http\Resources\ProductResource;
 
 class ProductController extends Controller
 {
@@ -15,7 +16,7 @@ class ProductController extends Controller
     public function index()
     {
         $products = Product::all();
-        return response()->json($products);
+        return ProductResource::collection($products);
     }
 
     /**
@@ -30,9 +31,9 @@ class ProductController extends Controller
             'category' => 'nullable|string|max:255'
         ]);
 
-        Product::create($data);
+        $product = Product::create($data);
 
-        return response()->json($data);
+        return new ProductResource($product);
     }
 
     /**
@@ -46,7 +47,7 @@ class ProductController extends Controller
             return response()->json(['message' => 'product not found dude']);
         }
 
-        return response()->json($product);
+        return new ProductResource($product);
     }
 
     /**
