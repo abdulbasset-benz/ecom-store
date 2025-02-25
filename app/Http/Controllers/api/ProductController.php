@@ -16,7 +16,7 @@ class ProductController extends Controller
     public function index()
     {
         $products = Product::all();
-        return ProductResource::collection($products);
+        return ProductResource::collection(Product::paginate(5));
     }
 
     /**
@@ -67,7 +67,7 @@ class ProductController extends Controller
 
         $product->update($data);
 
-        return response()->json($product);
+        return new ProductResource($product);
     }
 
     /**
