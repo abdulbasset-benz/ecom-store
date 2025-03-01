@@ -39,7 +39,7 @@ class AuthController extends Controller
     public function login(Request $request)
     {
         $request->validate([
-            'email' => 'required|string|email',
+            'email' => 'required|string|email|exists:users,email',
             'password' => 'required|string',
         ]);
 
@@ -58,6 +58,15 @@ class AuthController extends Controller
             'user' => Auth::user(),
             'access_token' => $token,
             'token_type' => 'Bearer'
+        ]);
+    }
+
+    public function logout(Request $request)
+    {
+        $request->user()->tokens()->delete();
+
+        return response()->json([
+            'message' => 'User logged out successfully'
         ]);
     }
 
