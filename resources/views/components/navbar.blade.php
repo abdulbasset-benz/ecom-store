@@ -55,20 +55,7 @@
                 </a>
             @endauth
 
-            @guest
-                <div class="hidden md:flex items-center space-x-4">
-                    <a href="{{ route('register') }}">
-                        <x-primary-button class="ms-4">
-                            {{ __('Register') }}
-                        </x-primary-button>
-                    </a>
-                    <a href="{{ route('login') }}">
-                        <x-primary-button class="ms-4">
-                            {{ __('Login') }}
-                        </x-primary-button>
-                    </a>
-                </div>
-            @endguest
+
         </div>
     </div>
 </nav>
