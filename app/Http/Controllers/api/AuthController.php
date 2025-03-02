@@ -4,21 +4,18 @@ namespace App\Http\Controllers\api;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use App\Http\Requests\LoginRequest;
 use App\Http\Controllers\Controller;
+use App\Http\Resources\AuthResource;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use App\Http\Requests\RegisterRequest;
 use Illuminate\Validation\ValidationException;
 
 class AuthController extends Controller
 {
-    public function register(Request $request)
+    public function register(RegisterRequest $request)
     {
-        $request->validate([
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', 'string', 'min:4', 'confirmed']
-        ]);
-
         $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
@@ -27,21 +24,13 @@ class AuthController extends Controller
 
         $token = $user->createToken('auth_token')->plainTextToken;
 
-        return response()->json([
-            'message' => 'User created successfully',
-            'access_token' => $token,
-            'user' => $user,
-            'token_type' => 'Bearer'
-        ]);
+        $user->access_token = $token;
+        return new AuthResource($user);
     }
 
 
-    public function login(Request $request)
+    public function login(LoginRequest $request)
     {
-        $request->validate([
-            'email' => 'required|string|email|exists:users,email',
-            'password' => 'required|string',
-        ]);
 
         $user = User::where('email', $request->email)->first();
 
@@ -52,13 +41,9 @@ class AuthController extends Controller
         }
 
         $token = $user->createToken('auth_token')->plainTextToken;
+        $user->access_token = $token;
 
-        return response()->json([
-            'message' => 'User logged in successfully',
-            'user' => Auth::user(),
-            'access_token' => $token,
-            'token_type' => 'Bearer'
-        ]);
+        return new AuthResource($user);
     }
 
     public function logout(Request $request)
