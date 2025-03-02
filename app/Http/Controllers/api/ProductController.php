@@ -3,9 +3,9 @@
 namespace App\Http\Controllers\api;
 
 use App\Models\Product;
-use Illuminate\Http\Request;
-use GuzzleHttp\Handler\Proxy;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\StoreProductRequest;
+use App\Http\Requests\UpdateProductRequest;
 use App\Http\Resources\ProductResource;
 
 class ProductController extends Controller
@@ -15,24 +15,16 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products = Product::all();
         return ProductResource::collection(Product::paginate(5));
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(StoreProductRequest $request)
     {
-        $data = $request->validate([
-            'name' => 'required|string|max:255',
-            'description' => 'required|string',
-            'price' => 'required|numeric',
-            'category' => 'nullable|string|max:255'
-        ]);
-
+        $data = $request->validated();
         $product = Product::create($data);
-
         return new ProductResource($product);
     }
 
@@ -41,32 +33,18 @@ class ProductController extends Controller
      */
     public function show(string $id)
     {
-        $product = Product::findOrFail($id);
 
-        if(!$product){
-            return response()->json(['message' => 'product not found dude']);
-        }
-
-        return new ProductResource($product);
+        return new ProductResource(Product::findOrFail($id));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(UpdateProductRequest $request, string $id)
 
     {
-        $product = Product::findOrFail($id);
-
-        $data = $request->validate([
-            'name' => 'required|string|max:255',
-            'description' => 'required|string',
-            'price' => 'required|numeric',
-            'category' => 'nullable|string|max:255'
-        ]);
-
-        $product->update($data);
-
+        $product = Product::FindOrFail($id);
+        $product->update($request->validated());
         return new ProductResource($product);
     }
 
