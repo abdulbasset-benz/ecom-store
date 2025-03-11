@@ -1,10 +1,10 @@
 <?php
 
+use App\Http\Controllers\Api\ApiProductController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Container\Attributes\Auth;
 use App\Http\Controllers\api\AuthController;
-use App\Http\Controllers\api\ProductController;
 use App\Http\Controllers\api\CategoryController;
 
 // Auth Routes
@@ -19,7 +19,6 @@ Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:sanctum');
 
-Route::middleware('throttle:5,1')->group(function () {
-    Route::apiResource('products', ProductController::class);
-
+Route::middleware('throttle:500,1')->group(function () {
+    Route::apiResource('products', ApiProductController::class);
 });
