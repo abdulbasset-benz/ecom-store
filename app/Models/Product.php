@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Product extends Model
 {
-    use SoftDeletes;
+    
 
     protected $fillable = [
         'name',

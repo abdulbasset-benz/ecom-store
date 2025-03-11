@@ -23,7 +23,8 @@
                 <li><a href="#" class="hover:text-gray-900 text-lg block p-4 lg:p-0">Home</a></li>
                 <li><a href="#" class="hover:text-gray-900 text-lg block p-4 lg:p-0">New Arrivals</a></li>
                 <li><a href="{{ route('products.index') }}"
-                        class="hover:text-gray-900 text-lg block p-4 lg:p-0">Products</a></li>
+                        class="hover:text-gray-900 text-lg block p-4 lg:p-0">Products</a>
+                </li>
                 <li><a href="#" class="hover:text-gray-900 text-lg block p-4 lg:p-0">Contact</a></li>
             </ul>
         </div>
